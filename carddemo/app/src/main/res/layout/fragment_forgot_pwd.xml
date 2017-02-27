@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_background"
+  android:orientation="vertical">
+
+  <include layout="@layout/title_bar_white" />
+
+  <com.cardvlaue.sys.util.EditData
+    android:id="@+id/et_forgot_pwd_mobile_phone"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginTop="@dimen/fab_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:drawableLeft="@mipmap/icon_forgot_pwd_mobile_phone"
+    android:drawablePadding="12dp"
+    android:drawableStart="@mipmap/icon_forgot_pwd_mobile_phone"
+    android:gravity="center_vertical"
+    android:hint="@string/forgot_pwd_mobile_phone"
+    android:inputType="phone"
+    android:maxLength="11"
+    android:maxLines="1"
+    android:textAppearance="@style/TextAppearance.FontPath"
+    android:textColorHint="#909090"
+    android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+    android:textSize="13sp"
+    app:inputLabel="手机号码"
+    app:inputName="mobilePhone"
+    app:pageName="忘记密码" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#DBDBDB" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <com.cardvlaue.sys.util.EditData
+      android:id="@+id/et_forgot_pwd_code"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@color/transparent"
+      android:drawableLeft="@mipmap/icon_forgot_pwd_code"
+      android:drawablePadding="12dp"
+      android:drawableStart="@mipmap/icon_forgot_pwd_code"
+      android:gravity="center_vertical"
+      android:hint="@string/forgot_pwd_code"
+      android:inputType="number"
+      android:maxLength="4"
+      android:maxLines="1"
+      android:textAppearance="@style/TextAppearance.FontPath"
+      android:textColorHint="#909090"
+      android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+      android:textSize="13sp"
+      app:inputLabel="验证码"
+      app:inputName="mobilePhoneVerifyCode"
+      app:pageName="忘记密码" />
+
+    <Button
+      android:id="@+id/btn_forgot_pwd_code"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_gravity="center_vertical"
+      android:background="@drawable/selector_register_get_code"
+      android:text="@string/forgot_pwd_obtain_code"
+      android:textColor="@color/selector_register_get_code"
+      android:textSize="13sp" />
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#DBDBDB" />
+
+  <com.cardvlaue.sys.util.EditData
+    android:id="@+id/et_forgot_pwd_new"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:drawableLeft="@mipmap/icon_forgot_pwd_new"
+    android:drawablePadding="12dp"
+    android:drawableStart="@mipmap/icon_forgot_pwd_new"
+    android:gravity="center_vertical"
+    android:hint="@string/forgot_pwd_new"
+    android:inputType="textPassword"
+    android:maxLength="20"
+    android:maxLines="1"
+    android:textAppearance="@style/TextAppearance.FontPath"
+    android:textColorHint="#909090"
+    android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+    android:textSize="13sp"
+    app:inputLabel="新密码"
+    app:inputName="password"
+    app:pageName="忘记密码" />
+
+  <Button
+    android:id="@+id/btn_forgot_pwd_commit"
+    style="?android:attr/borderlessButtonStyle"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/fab_margin"
+    android:background="@drawable/shape_pos_add_introduction_know"
+    android:text="@string/forgot_pwd_commit"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</LinearLayout>

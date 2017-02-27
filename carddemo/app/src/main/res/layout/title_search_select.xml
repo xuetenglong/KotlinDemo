@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="50dp"
+  android:background="@android:color/white">
+
+  <ImageButton
+    android:id="@+id/ibtn_title_search_back"
+    android:layout_width="60dp"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="32dp"
+    android:background="@android:color/transparent"
+    android:src="@mipmap/icon_back_black" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="请选择"
+    android:textColor="@color/lists_item_text_left"
+    android:textSize="@dimen/title_size_middle" />
+
+  <SearchView
+    android:id="@+id/sv_title_search_button"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@android:color/white"
+    android:queryHint="搜索" />
+</FrameLayout>

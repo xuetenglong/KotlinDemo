@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <include layout="@layout/title_bar_white" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="27dp"
+      android:text="@string/forgot_pwd_code_send"
+      android:textColor="#909090"
+      android:textSize="14sp" />
+
+    <TextView
+      android:id="@+id/tv_register_verify_mobile_phone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_gravity="center_horizontal"
+      android:text="@string/forgot_pwd_code_null"
+      android:textColor="@color/app_blue"
+      android:textSize="25sp" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp">
+
+      <com.cardvlaue.sys.util.EditData
+        android:id="@+id/et_register_verify_sms_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        android:hint="@string/forgot_pwd_sms_code"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColorHint="#909090"
+        android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+        android:textSize="15sp"
+        app:inputLabel="短信验证码"
+        app:inputName="smscode"
+        app:pageName="注册验证" />
+
+      <Button
+        android:id="@+id/btn_register_verify_obtain_code"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_login_button"
+        android:text="重新获取"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:layout_marginTop="10dp"
+      android:background="#E8E8E8" />
+
+
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="22dp">
+
+      <TextView
+        android:id="@+id/tv_forgot_pwd_code_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pwd_code_not"
+        android:layout_centerVertical="true"
+        android:textColor="#909090"
+        android:textSize="14sp" />
+
+      <TextView
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_forgot_pwd_code_not"
+        android:id="@+id/tv_register_verify_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/forgot_pwd_code_service"
+        android:textColor="@color/app_blue"
+        android:textSize="14sp" />
+
+      <Button
+        android:id="@+id/btn_invite_code"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_register_get_code"
+        android:text="我有邀请码"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/app_blue"
+        android:textSize="12sp" />
+    </RelativeLayout>
+
+   <!-- <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="27dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pwd_code_not"
+        android:textColor="#909090"
+        android:textSize="14sp" />
+
+      <TextView
+        android:id="@+id/tv_register_verify_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/forgot_pwd_code_service"
+        android:textColor="@color/app_blue"
+        android:textSize="14sp" />
+
+      <Button
+        android:id="@+id/btn_invite_code"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginLeft="58dp"
+        android:layout_toEndOf="@id/et_register_verify_sms_code"
+        android:layout_toRightOf="@id/et_register_verify_sms_code"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/selector_register_get_code"
+        android:text="我有邀请码"
+        android:textColor="@color/app_blue"
+        android:textSize="12sp" />
+
+    </LinearLayout>-->
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="200dp" >
+
+      <!-- <FrameLayout
+         android:visibility="visible"
+         android:id="@+id/fl_register_verify_invite_code"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="40dp">-->
+
+      <com.cardvlaue.sys.util.EditData
+        android:visibility="gone"
+        android:layout_marginTop="40dp"
+        android:id="@+id/et_register_verify_invite_code"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:hint="@string/forgot_pwd_invite_code"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textColorHint="#909090"
+        android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+        android:textSize="15sp"
+        app:inputLabel="邀请码"
+        app:inputName="code"
+        app:pageName="注册验证" />
+
+      <!--<ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_explain"
+        android:visibility="gone" />
+    </FrameLayout>-->
+
+      <View
+        android:visibility="gone"
+        android:id="@+id/view_register_verify_invite_code"
+        android:layout_below="@+id/et_register_verify_invite_code"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#E8E8E8" />
+
+      <Button
+        android:visibility="visible"
+        android:id="@+id/btn_forgot_pwd_commit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_login_button"
+        android:text="@string/forgot_pwd_complete"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    </RelativeLayout>
+  </LinearLayout>
+</LinearLayout>

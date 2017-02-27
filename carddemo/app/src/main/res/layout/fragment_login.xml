@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  android:fitsSystemWindows="true"
+  android:focusable="true"
+  android:focusableInTouchMode="true">
+
+  <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:contentDescription="@string/login_name" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/title_bar_height"
+      android:background="@color/white">
+
+      <ImageButton
+        android:id="@+id/ib_login_back"
+        android:layout_width="@dimen/title_bar_height"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:contentDescription="@string/login_name"
+        android:src="@mipmap/icon_back_black" />
+    </RelativeLayout>
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="27dp"
+        android:paddingRight="27dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="140dp"
+          android:layout_height="46dp"
+          android:layout_marginTop="40dp"
+          android:layout_marginBottom="40dp"
+          android:contentDescription="@string/login_name"
+          android:src="@mipmap/icon_login_logo" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <com.cardvlaue.sys.util.EditData
+            android:id="@+id/et_login_mobilePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:hint="@string/login_mobile_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColorHint="#909090"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+            android:textSize="15sp"
+            app:inputLabel="手机号码"
+            app:inputName="mobilePhone"
+            app:pageName="登录" />
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D7D7D7" />
+
+          <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_login_password"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="12dp"
+              android:paddingBottom="12dp"
+              android:background="@color/transparent"
+              android:gravity="center"
+              android:hint="@string/login_pwd_hint"
+              android:imeOptions="actionDone"
+              android:inputType="textPassword"
+              android:maxLength="20"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColorHint="#909090"
+              android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+              android:textSize="15sp"
+              app:inputLabel="密码"
+              app:inputName="password"
+              app:pageName="登录" />
+
+            <ImageButton
+              android:id="@+id/ib_login_pwd_shown"
+              android:layout_width="48dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="end"
+              android:background="@color/white"
+              android:contentDescription="@string/login_name"
+              android:src="@mipmap/icon_pwd_invisible" />
+          </FrameLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D7D7D7" />
+
+          <LinearLayout
+            android:id="@+id/ll_login_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+              android:id="@+id/ckb_login_agreement"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingStart="8dp"
+              android:paddingEnd="0dp"
+              android:paddingLeft="8dp"
+              android:paddingRight="0dp"
+              android:background="@null"
+              android:button="@drawable/selector_login_checkbox"
+              android:checked="true"
+              android:text="@string/login_agree"
+              android:textColor="#909090"
+              android:textSize="14sp" />
+
+            <TextView
+              android:id="@+id/tv_login_service_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/forgot_pwd_agreement"
+              android:textColor="@color/app_blue"
+              android:textSize="14sp" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tv_login_forgot_hint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/login_forgot_hint"
+              android:textColor="#909090"
+              android:textSize="14sp"
+              android:visibility="gone" />
+
+            <TextView
+              android:id="@+id/tv_login_forgot_pwd"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="忘记密码?"
+              android:textColor="@color/app_blue"
+              android:textSize="14sp" />
+          </LinearLayout>
+
+          <Button
+            android:id="@+id/btn_login_commit"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/selector_login_button"
+            android:text="@string/login_name"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+          <TextView
+            android:id="@+id/tv_login_change_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/register_name"
+            android:textColor="@color/app_blue"
+            android:textSize="18sp" />
+        </LinearLayout>
+      </LinearLayout>
+    </ScrollView>
+  </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <!-- 悄悄计入文本框的数据 -->
+  <declare-styleable name="TextData">
+    <attr format="string" name="pageName"></attr>
+    <attr format="string" name="inputName"></attr>
+    <attr format="string" name="inputLabel"></attr>
+  </declare-styleable>
+
+  <declare-styleable name="RoundProgressBar">
+    <attr format="color" name="roundColor" />
+    <attr format="color" name="roundProgressColor" />
+    <attr format="dimension" name="roundWidth" />
+    <attr format="color" name="textColor" />
+    <attr format="dimension" name="textSize" />
+    <attr format="integer" name="max" />
+    <attr format="boolean" name="textIsDisplayable" />
+    <attr name="style">
+      <enum name="STROKE" value="0" />
+      <enum name="FILL" value="1" />
+    </attr>
+  </declare-styleable>
+
+  <declare-styleable name="SlantedTextView">
+    <attr format="dimension" name="slantedTextSize" />
+    <attr format="color" name="slantedBackgroundColor" />
+    <attr format="string" name="slantedText" />
+    <attr format="color" name="slantedTextColor" />
+    <attr format="dimension" name="slantedLength" />
+    <attr format="enum" name="slantedMode">
+      <enum name="left" value="0" />
+      <enum name="right" value="1" />
+      <enum name="left_bottom" value="2" />
+      <enum name="right_bottom" value="3" />
+      <enum name="left_triangle" value="4" />
+      <enum name="right_triangle" value="5" />
+      <enum name="left_bottom_triangle" value="6" />
+      <enum name="right_bottom_triangle" value="7" />
+    </attr>
+  </declare-styleable>
+
+
+  <declare-styleable name="PagerSlidingTabStrip">
+    <attr format="color" name="pstsIndicatorColor" />
+    <attr format="color" name="pstsUnderlineColor" />
+    <attr format="color" name="pstsDividerColor" />
+    <attr format="dimension" name="pstsIndicatorHeight" />
+    <attr format="dimension" name="pstsUnderlineHeight" />
+    <attr format="dimension" name="pstsDividerPadding" />
+    <attr format="dimension" name="pstsTabPaddingLeftRight" />
+    <attr format="dimension" name="pstsScrollOffset" />
+    <attr format="reference" name="pstsTabBackground" />
+    <attr format="boolean" name="pstsShouldExpand" />
+    <attr format="boolean" name="pstsTextAllCaps" />
+  </declare-styleable>
+
+</resources>

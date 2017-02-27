@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/ll_white_root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_background"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical"
+  tools:context=".shopadd.ShopAddActivity">
+
+  <include layout="@layout/title_bar_white" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/app_background"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:orientation="vertical">
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_industry" />
+
+        <TextView
+          android:id="@+id/tv_shop_add_industry"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:ellipsize="end"
+          android:gravity="end|center_vertical"
+          android:maxLines="1"
+          android:text="@string/shop_add_select"
+          android:textColor="@color/shop_add_text_hint" />
+
+        <ImageView
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:src="@mipmap/icon_more" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_id" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_shop_add_register_id"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="end|center_vertical"
+          android:hint="@string/shop_add_id_input"
+          android:inputType="text"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:inputLabel="营业执照注册号"
+          app:inputName="bizRegisterNo"
+          app:pageName="添加店铺" />
+      </LinearLayout>
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_company_name" />
+
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_shop_add_company_name"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="end|center_vertical"
+          android:hint="@string/shop_add_company_name_hint"
+          android:inputType="text"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:inputLabel="企业经营名称"
+          app:inputName="businessName"
+
+          app:pageName="添加店铺" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_address" />
+
+        <TextView
+          android:id="@+id/tv_shop_add_shop_address"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:ellipsize="end"
+          android:gravity="end|center_vertical"
+          android:maxLines="1"
+          android:text="@string/shop_add_select"
+          android:textColor="@color/shop_add_text_hint" />
+
+        <ImageView
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:src="@mipmap/icon_more" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="店铺详细地址" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_shop_add_address_details"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="end|center_vertical"
+          android:hint="请输入"
+          android:inputType="text"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:inputLabel="店铺详细地址"
+          app:inputName="businessAccurateAddress"
+          app:pageName="添加店铺" />
+      </LinearLayout>
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_number" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_shop_add_shop_number"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="end|center_vertical"
+          android:hint="@string/shop_add_number_hint"
+          android:inputType="number"
+          android:text="1"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:inputLabel="门店数"
+          app:inputName="numLocations"
+          app:pageName="添加店铺" />
+      </LinearLayout>
+
+      <LinearLayout
+        style="@style/lists_item_container"
+        android:layout_marginTop="10dp">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin"
+          android:text="@string/shop_add_has_agreement" />
+
+        <TextView
+          android:id="@+id/tv_shop_add_has_contract"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:drawableEnd="@mipmap/icon_more"
+          android:drawablePadding="4dp"
+          android:drawableRight="@mipmap/icon_more"
+          android:gravity="end|center_vertical"
+          android:text="@string/shop_add_select"
+          android:textColor="@color/shop_add_text_hint" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout
+        android:id="@+id/ll_shop_add_contract_yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+          style="@style/lists_item_container"
+          android:visibility="visible">
+
+          <TextView
+            style="@style/lists_item_text"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/shop_add_landlord_name" />
+
+          <com.cardvlaue.sys.util.EditData
+            android:id="@+id/et_shop_add_landlord_name"
+            style="@style/lists_item_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="@string/shop_add_landlord_name_hint"
+            android:inputType="textPersonName"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            app:inputLabel="房东姓名"
+            app:inputName="landlord_name"
+            app:pageName="添加店铺" />
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginRight="12dp"
+          android:background="#E5E5E5" />
+
+        <LinearLayout
+          style="@style/lists_item_container"
+          android:visibility="visible">
+
+          <TextView
+            style="@style/lists_item_text"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/shop_add_landlord_phone" />
+
+          <com.cardvlaue.sys.util.EditData
+            android:id="@+id/et_shop_add_landlord_phone"
+            style="@style/lists_item_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:hint="@string/shop_add_landlord_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            app:inputLabel="房东手机号码"
+            app:inputName="landlord_phone"
+            app:pageName="添加店铺" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_shop_add_contract_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout style="@style/lists_item_container">
+
+          <TextView
+            style="@style/lists_item_text"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/shop_add_why_agreement" />
+
+
+          <TextView
+            android:id="@+id/tv_shop_add_why_no_contract"
+            style="@style/lists_item_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@mipmap/icon_more"
+            android:drawablePadding="4dp"
+            android:drawableRight="@mipmap/icon_more"
+            android:gravity="end|center_vertical"
+            android:text="@string/shop_add_select"
+            android:textColor="@color/shop_add_text_hint" />
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginRight="12dp"
+          android:background="#E5E5E5" />
+
+        <LinearLayout
+          android:id="@+id/ll_shop_add_contract_loss"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:visibility="gone">
+
+          <LinearLayout style="@style/lists_item_container">
+
+            <TextView
+              style="@style/lists_item_text"
+              android:layout_marginEnd="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:text="@string/shop_add_upload_start_contract" />
+
+
+            <TextView
+              android:id="@+id/tv_shop_add_contract_start_time"
+              style="@style/lists_item_text"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:drawableEnd="@mipmap/icon_more"
+              android:drawablePadding="4dp"
+              android:drawableRight="@mipmap/icon_more"
+              android:gravity="end|center_vertical"
+              android:text="@string/shop_add_select"
+              android:textColor="#B9B9B9" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E5E5E5" />
+
+          <LinearLayout style="@style/lists_item_container">
+
+            <TextView
+              style="@style/lists_item_text"
+              android:layout_marginEnd="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:text="@string/shop_add_upload_end_contract" />
+
+
+            <TextView
+              android:id="@+id/tv_shop_add_contract_end_time"
+              style="@style/lists_item_text"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:drawableEnd="@mipmap/icon_more"
+              android:drawablePadding="4dp"
+              android:drawableRight="@mipmap/icon_more"
+              android:gravity="end|center_vertical"
+              android:text="@string/shop_add_select"
+              android:textColor="#B9B9B9" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E5E5E5" />
+
+          <LinearLayout style="@style/lists_item_container">
+
+            <TextView
+              style="@style/lists_item_text"
+              android:layout_marginEnd="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:text="@string/shop_add_upload_annual_trent" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_shop_add_rental"
+              style="@style/lists_item_text"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="end|center_vertical"
+              android:hint="@string/shop_add_upload_annual_trent_hint"
+              android:inputType="number"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              app:inputLabel="年租金"
+              app:inputName="add_rental"
+              app:pageName="添加店铺" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E5E5E5" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/ll_shop_add_free_use"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:visibility="gone">
+
+          <LinearLayout style="@style/lists_item_container">
+
+            <TextView
+              style="@style/lists_item_text"
+              android:layout_marginEnd="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:text="@string/shop_add_owner_name" />
+
+            <EditText
+              android:id="@+id/et_shop_add_proprietor_name"
+              style="@style/lists_item_text"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="end|center_vertical"
+              android:hint="@string/shop_add_owner_name_hint"
+              android:inputType="text"
+              android:textAppearance="@style/TextAppearance.FontPath" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E5E5E5" />
+
+          <LinearLayout style="@style/lists_item_container">
+
+            <TextView
+              style="@style/lists_item_text"
+              android:layout_marginEnd="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:text="@string/shop_add_owner_phone" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_shop_add_proprietor_phone"
+              style="@style/lists_item_text"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="end|center_vertical"
+              android:hint="@string/shop_add_owner_phone_hint"
+              android:inputType="phone"
+              android:maxLength="11"
+              android:textAppearance="@style/TextAppearance.FontPath" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+  <Button
+    android:id="@+id/btn_shop_add_commit"
+    style="@style/lists_commit_button"
+    android:text="@string/shop_add_commit" />
+</LinearLayout>

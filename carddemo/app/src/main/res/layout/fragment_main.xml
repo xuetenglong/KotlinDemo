@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+      android:id="@+id/fragment_main_content"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:background="#E0E0E0" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="47dp"
+      android:background="#F8F8F8"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:id="@+id/ll_main_tab_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/iv_tab_icon_home"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          fresco:actualImageScaleType="fitXY"
+          fresco:backgroundImage="@mipmap/icon_tab_home_default0" />
+
+        <TextView
+          android:id="@+id/tv_tab_text_home"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="首页"
+          android:textColor="@color/selector_tab_text"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_main_tab_apply"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/iv_tab_icon_apply"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          fresco:actualImageScaleType="fitXY"
+          fresco:backgroundImage="@mipmap/icon_tab_apply_default0" />
+
+        <TextView
+          android:id="@+id/tv_tab_text_apply"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="申请"
+          android:textColor="@color/selector_tab_text"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_main_tab_my"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/iv_tab_icon_my"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          fresco:actualImageScaleType="fitXY"
+          fresco:backgroundImage="@mipmap/icon_tab_my_default0" />
+
+        <TextView
+          android:id="@+id/tv_tab_text_my"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="我的"
+          android:textColor="@color/selector_tab_text"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_main_tab_more"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/iv_tab_icon_more"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          fresco:actualImageScaleType="fitXY"
+          fresco:backgroundImage="@mipmap/icon_tab_more_default0" />
+
+        <TextView
+          android:id="@+id/tv_tab_text_more"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="更多"
+          android:textColor="@color/selector_tab_text"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+  <!--引导页-->
+  <RelativeLayout
+    android:id="@+id/rl_main_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <android.support.v4.view.ViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+    <LinearLayout
+      android:id="@+id/ly_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+      <Button
+        android:id="@+id/butt"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/selector_button_start"
+        android:text="立即体验"
+        android:textColor="@color/app_blue"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+      <!-- 用于存放导航小圆点 -->
+      <LinearLayout
+        android:id="@+id/pointGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+    </LinearLayout>
+  </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="0dp"
+  android:background="@color/app_blue"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+      android:id="@+id/top_layout"
+      layout="@layout/title_default" />
+
+
+    <com.cardvlaue.sys.redenvelope.PagerSlidingTabStrip
+      android:id="@+id/tabs"
+      android:layout_width="match_parent"
+      android:layout_height="52dp"
+      android:layout_below="@id/top_layout" />
+
+
+    <android.support.v4.view.ViewPager
+      android:id="@+id/viewpage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tabs"
+      android:divider="@null" />
+  </LinearLayout>
+</RelativeLayout>

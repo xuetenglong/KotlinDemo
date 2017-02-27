@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="10dp"
+      android:background="@color/f4f4f4" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:paddingLeft="12dp"
+      android:paddingRight="12dp"
+      android:background="@color/white">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="还款汇总表"
+        android:textColor="#343434"
+        android:textSize="15sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/selector_button_lines"
+        android:gravity="center_vertical"
+        android:text="未逾期"
+        android:textColor="@color/app_blue"
+        android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="260dp"
+      android:layout_marginTop="-5dp"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+      <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="还款总额"
+          android:textColor="#6d6d6d"
+          android:textSize="12sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1000元"
+          android:textColor="#010101"
+          android:textSize="14sp" />
+
+      </LinearLayout>
+
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="44dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="116dp"
+          android:layout_height="wrap_content"
+          android:gravity="left">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="未还金额:"
+            android:textColor="#8b8b8b"
+            android:textSize="12sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="9万元"
+            android:textColor="#343434"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.haozhang.lib.SlantedTextView
+          android:layout_width="6dp"
+          android:layout_height="6dp"
+          android:layout_margin="1.33dp"
+          android:layout_gravity="end"
+          app:slantedBackgroundColor="@color/app_blue"
+          app:slantedLength="0.8dp"
+          app:slantedMode="left"
+          app:slantedTextColor="@color/white"
+          app:slantedTextSize="14sp" />
+
+        <TextView
+          android:layout_width="116dp"
+          android:layout_height="0.5dp"
+          android:layout_marginTop="-2.6dp"
+          android:layout_marginRight="6.8dp"
+          android:background="@color/app_blue" />
+
+        <TextView
+          android:layout_width="3dp"
+          android:layout_height="3dp"
+          android:layout_marginTop="-7.5dp"
+          android:layout_marginLeft="118.5dp"
+          android:background="@drawable/dialog_over_blue" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="116dp"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="6dp"
+          android:gravity="left">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="实还金额:"
+            android:textColor="#8b8b8b"
+            android:textSize="12sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="1万元"
+            android:textColor="#343434"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.haozhang.lib.SlantedTextView
+              android:layout_width="6dp"
+              android:layout_height="6dp"
+              android:layout_margin="1.33dp"
+              android:layout_gravity="end"
+              app:slantedBackgroundColor="#f6b273"
+              app:slantedLength="0.8dp"
+              app:slantedMode="left"
+              app:slantedTextColor="@color/white"
+              app:slantedTextSize="14sp" />
+
+            <TextView
+              android:layout_width="3dp"
+              android:layout_height="3dp"
+              android:layout_marginTop="5.5dp"
+              android:background="@drawable/dialog_over_6" />
+
+            <TextView
+              android:layout_width="116dp"
+              android:layout_height="0.5dp"
+              android:layout_marginTop="1dp"
+              android:layout_marginLeft="7dp"
+              android:background="#f6b273" />
+
+            <LinearLayout
+              android:layout_width="116dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:gravity="left">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="累计手续费:"
+                android:textColor="#f6b273"
+                android:textSize="10sp" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="1000元"
+                android:textColor="#f6b273"
+                android:textSize="12sp" />
+            </LinearLayout>
+          </RelativeLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+      android:layout_marginTop="-10dp"
+      android:background="@color/white"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="10dp"
+          android:layout_height="10dp"
+          android:background="@drawable/dialog_over_5" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingLeft="4dp"
+          android:text="实还金额"
+          android:textColor="#777777"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="26dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="10dp"
+          android:layout_height="10dp"
+          android:background="@drawable/dialog_over_4" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingLeft="4dp"
+          android:text="未还金额"
+          android:textColor="#777777"
+          android:textSize="13sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="6dp"
+      android:background="@color/white" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="0.5dp"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
+      android:background="#e5e5e5" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="95dp"
+      android:paddingTop="20dp"
+      android:paddingBottom="20dp"
+      android:paddingLeft="12dp"
+      android:paddingRight="12dp"
+      android:background="@color/white"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dialog_over_blue" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="总还期数:"
+            android:textColor="#8b8b8b"
+            android:textSize="13sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="9期"
+            android:textColor="#343434"
+            android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dialog_over_2" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="还款频率:"
+            android:textColor="#8b8b8b"
+            android:textSize="13sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="每月"
+            android:textColor="#343434"
+            android:textSize="14sp" />
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+      <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:background="@color/f4f4f4" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dialog_over_1" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="实还期数:"
+            android:textColor="#8b8b8b"
+            android:textSize="13sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="1期"
+            android:textColor="#343434"
+            android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/dialog_over_3" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="每期还款:"
+            android:textColor="#8b8b8b"
+            android:textSize="13sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="1万元"
+            android:textColor="#343434"
+            android:textSize="14sp" />
+        </LinearLayout>
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="10dp"
+      android:background="@color/f4f4f4" />
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/white">
+
+        <TextView
+          android:id="@+id/tv_name"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:text="下期结算日"
+          android:textColor="#8b8b8b"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/tv_time"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:text="2016-11-27"
+          android:textColor="#343434"
+          android:textSize="14sp" />
+      </RelativeLayout>
+
+      <View
+        style="@style/lines_dbdbdb_12"
+        android:layout_marginLeft="12dp" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/white">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:text="最后还款日"
+          android:textColor="#8b8b8b"
+          android:textSize="14sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:text="2016-11-27"
+          android:textColor="#343434"
+          android:textSize="14sp" />
+      </RelativeLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+</RelativeLayout>

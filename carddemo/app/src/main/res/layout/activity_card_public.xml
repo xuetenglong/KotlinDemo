@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true"
+  tools:context="com.cardvlaue.sys.cardverify.CardPrivateActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="66dp"
+      android:background="@drawable/shape_my_bg_credit"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp"
+        android:orientation="vertical">
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="165dp"
+          android:background="@color/white">
+
+          <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_bank_private" />
+        </RelativeLayout>
+
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_bank_ka"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="放款账户信息(对公)"
+            android:textColor="@color/text_vice"
+            android:textSize="12sp" />
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="开户行" />
+
+            <TextView
+              android:id="@+id/tv_secondaryBankName"
+              style="@style/public_text_right"
+              android:drawableRight="@mipmap/icon_more"
+              android:hint="请选择放款账户开户行" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="银行账号" />
+
+            <com.cardvlaue.sys.util.CardInputEditText
+              android:id="@+id/tv_secondaryBankDDA"
+              style="@style/public_text_right"
+              android:hint="请输入放款账户银行账号"
+              app:inputLabel="放款银行帐号"
+              app:inputName="secondaryBankDDA"
+              app:pageName="银行卡绑定对公" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/ic_bank_ka"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="还款账户信息(对私)"
+            android:textColor="@color/text_vice"
+            android:textSize="12sp" />
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="开户行" />
+
+            <TextView
+              android:id="@+id/tv_directDebitBankName"
+              style="@style/public_text_right"
+              android:drawableRight="@mipmap/icon_more"
+              android:hint="请选择还款账户开户行" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/bank_account" />
+
+            <com.cardvlaue.sys.util.CardInputEditText
+              android:id="@+id/tv_directDebitAcctNo"
+              style="@style/public_text_right"
+              android:hint="@string/bank_account_hint"
+              app:inputLabel="还款银行账号"
+              app:inputName="directDebitAcctNo"
+              app:pageName="银行卡绑定对公" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/reserved_phone" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/tv_directDebitAcctPhone"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="5"
+              android:background="@null"
+              android:gravity="center_vertical"
+              android:hint="@string/reserved_phone_hint"
+              android:textColorHint="@color/b9b9b9"
+              android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+              android:textSize="14sp"
+              app:inputLabel="银行预留手机号"
+              app:inputName="directDebitAcctPhone"
+              app:pageName="银行卡绑定对公" />
+
+            <TextView
+              android:id="@+id/tv_code"
+              android:layout_width="0dp"
+              android:layout_height="23dp"
+              android:layout_weight="2.5"
+              android:layout_gravity="center_vertical"
+              android:background="@drawable/selector_register_get_code"
+              android:gravity="center"
+              android:text="@string/forgot_pwd_obtain_code"
+              android:textColor="@color/selector_register_get_code"
+              android:textSize="13sp" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/code" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/tv_mobilePhoneVerifyCode"
+              style="@style/public_text_right"
+              android:hint="@string/mobile_verify_code_hint"
+              app:inputLabel="验证码"
+              app:inputName="mobilePhoneVerifyCode"
+              app:pageName="银行卡绑定对公" />
+          </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tv_protocol"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="12dp"
+          android:drawableLeft="@mipmap/ic_agree"
+          android:drawablePadding="6dp"
+          android:gravity="center_vertical"
+          android:text="@string/agree_card"
+          android:textColor="@color/app_blue"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/bank_submit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selector_button_straight"
+    android:gravity="center"
+    android:text="提交"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</RelativeLayout>

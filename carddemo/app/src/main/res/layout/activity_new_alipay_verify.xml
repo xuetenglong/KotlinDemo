@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  android:orientation="vertical">
+
+  <include layout="@layout/title_default" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:orientation="vertical">
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_background_color" />
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:src="@mipmap/icon_new_alipay" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+            android:id="@+id/tv2"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dialog_over_7" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv2"
+            android:text="请确保您手机已经安装过支付宝APP;"
+            android:textColor="#565656"
+            android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
+
+          <TextView
+            android:id="@+id/tv3"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dialog_over_7" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv3"
+            android:text="请保证您的支付宝登录是您本人经营所用账号;"
+            android:textColor="#565656"
+            android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
+
+          <TextView
+            android:id="@+id/tv5"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/dialog_over_7" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv5"
+            android:lineSpacingMultiplier="1.4"
+            android:text="支付宝授权过程中可能需要打开支付宝APP进行登录，请在一分钟内完成支付宝登录，如果超时  可能导致无法计算出您的额度"
+            android:textColor="#565656"
+            android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+          android:id="@+id/ly_agreement"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:orientation="horizontal">
+
+          <CheckBox
+            android:id="@+id/ckb_login_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="0dp"
+            android:background="@null"
+            android:button="@drawable/selector_login_checkbox"
+            android:checked="true"
+            android:enabled="false"
+            android:text="@string/login_agree"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+
+          <TextView
+            android:id="@+id/tv_credit_reports_how"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="《支付宝授权协议》"
+            android:textColor="@color/app_blue" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <Button
+        android:id="@+id/btn_newalipay_commit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/shape_pos_add_introduction_know"
+        android:text="立即验证"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_background_color" />
+
+      <WebView
+        android:id="@+id/web_pay_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

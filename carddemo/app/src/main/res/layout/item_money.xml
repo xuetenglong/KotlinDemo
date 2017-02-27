@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/f4f4f4"
+  android:orientation="vertical">
+
+  <!-- 我的红包     之前背景 #f4f4f4 -->
+  <View
+    android:id="@+id/view1"
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/f4f4f4"
+    android:visibility="gone" />
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/f4f4f4">
+
+
+    <RelativeLayout
+      android:id="@+id/ry_youhuiquan"
+      android:layout_width="match_parent"
+      android:layout_height="106dp"
+      android:layout_marginLeft="18dp"
+      android:layout_marginRight="18dp"
+      android:background="@mipmap/youhuiquan">
+
+      <!-- <CheckBox
+          android:id="@+id/ckbox"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_margin="6dp"
+          android:enabled="false"
+          android:background="@drawable/select_check_yes_no"
+          android:button="@null" /> -->
+      <TextView
+        android:id="@+id/qian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="66dp"
+        android:text="¥10.00"
+        android:textColor="#fc5031"
+        android:textSize="28sp" />
+
+      <TextView
+        android:id="@+id/qian_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="66dp"
+        android:layout_below="@id/qian"
+        android:text="新手注册得红包10元"
+        android:textColor="#818181"
+        android:textSize="13sp" />
+
+      <TextView
+        android:id="@+id/tv_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="26dp"
+        android:layout_below="@id/qian"
+        android:layout_toRightOf="@+id/qian_s"
+        android:text="未使用"
+        android:textColor="#818181"
+        android:textSize="13sp" />
+    </RelativeLayout>
+
+    <com.cardvlaue.sys.redenvelope.TransRelativeLayout
+      android:id="@+id/TransRelativeLayout"
+      android:layout_width="match_parent"
+      android:layout_height="106dp"
+      android:layout_marginLeft="18dp"
+      android:layout_marginRight="18dp"
+      android:background="@drawable/coupons_shape1"
+      android:visibility="visible"></com.cardvlaue.sys.redenvelope.TransRelativeLayout>
+  </RelativeLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/f4f4f4" />
+</LinearLayout>

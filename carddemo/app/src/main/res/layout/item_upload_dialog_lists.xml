@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/tv_bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/dialog_radius_upload_no" />
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_financing_upload_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="21dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:roundedCornerRadius="10dp" />
+
+      <ImageView
+        android:id="@+id/iv_add_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/add_pic"
+        android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+      android:id="@+id/tv_demo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="6dp"
+      android:gravity="center"
+      android:textColor="@color/text_vice" />
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/iv_left_upload_item_dialog"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginTop="12dp"
+    android:contentDescription="@string/app_name"
+    android:scaleType="fitXY"
+    android:src="@mipmap/ic_dialog_cancle"
+    android:visibility="gone" />
+</FrameLayout>

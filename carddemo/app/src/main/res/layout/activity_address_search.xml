@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/iv_search_back"
+      android:layout_width="50dp"
+      android:layout_height="match_parent"
+      android:contentDescription="@string/app_name"
+      android:scaleType="center"
+      android:src="@mipmap/icon_back_black" />
+
+    <EditText
+      android:id="@+id/et_search_input"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:layout_margin="8dp"
+      android:padding="8dp"
+      android:background="@drawable/shape_financing_inputbox"
+      android:drawableLeft="@mipmap/icon_search"
+      android:drawablePadding="8dp"
+      android:drawableStart="@mipmap/icon_search"
+      android:hint="@string/search_hit"
+      android:inputType="text"
+      android:maxLines="1"
+      android:textColor="@color/black"
+      android:textSize="13sp" />
+
+    <TextView
+      android:id="@+id/tv_address_search_button"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_margin="8dp"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:background="@drawable/shape_address_search"
+      android:gravity="center"
+      android:text="@string/search_name"
+      android:textColor="@android:color/black" />
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="8dp"
+    android:background="@color/app_background"
+    android:lineSpacingExtra="6dp"
+    android:text="温馨提示：如您的地址无法搜索到，请输入附近地址即可！\n目前我司暂不支持西藏、新疆、海南、青海、贵州5省地区业务，敬请期待。"
+    android:textColor="#616161"
+    android:textSize="12sp" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#E8E8E8" />
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_search_lists"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background" />
+</LinearLayout>

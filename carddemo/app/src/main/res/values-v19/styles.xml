@@ -1,0 +1,15 @@
+<resources>>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="TransparentStatusBarTheme" parent="AppTheme.NoActionBar">
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">false</item>
+    <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+    <item name="android:buttonStyle">@style/AppTheme.Widget.Button</item>
+    <item name="android:editTextStyle">@style/AppTheme.Widget.EditText</item>
+  </style>
+</resources>

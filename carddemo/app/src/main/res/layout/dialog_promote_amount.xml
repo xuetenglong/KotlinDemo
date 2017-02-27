@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:background="@drawable/dialog_radius"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:src="@mipmap/ic_cancel_black" />
+    </RelativeLayout>
+
+
+    <TextView
+      android:id="@+id/tv_titile"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:text="提升额度小技巧"
+      android:textColor="#000000"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/tv_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:paddingBottom="10dp"
+      android:paddingLeft="18dp"
+      android:paddingRight="18dp"
+      android:lineSpacingMultiplier="1.5"
+      android:text="1.您可以返回上级界面，通过新增POS商编的方式来提升您的授信额度"
+      android:textColor="@color/c7c7c"
+      android:textSize="13sp" />
+
+    <View style="@style/lines_dbdbdb" />
+
+    <Button
+      android:id="@+id/btn_ok"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="41dp"
+      android:layout_marginTop="11dp"
+      android:layout_marginBottom="17dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:background="@drawable/selector_button_rectangle"
+      android:text="我知道了，马上提升额度"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+  </LinearLayout>
+</LinearLayout>

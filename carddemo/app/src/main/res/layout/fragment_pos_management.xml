@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_background"
+  android:orientation="vertical"
+  tools:context=".posmanagement.PosManagementActivity">
+
+  <include layout="@layout/title_bar_white" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_pos_management_lists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+      <TextView
+        android:id="@+id/tv_pos_add"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/icon_pos_add"
+        android:drawablePadding="10dp"
+        android:drawableStart="@mipmap/icon_pos_add"
+        android:gravity="center_vertical"
+        android:text="@string/pos_add_name"
+        android:textColor="@color/app_blue"
+        android:textSize="18sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="@string/pos_management_text_hint"
+        android:textSize="12sp" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

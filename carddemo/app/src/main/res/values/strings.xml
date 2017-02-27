@@ -1,0 +1,302 @@
+<resources>
+  <string name="ok">确定</string>
+  <string name="cancel">取消</string>
+  <string name="tip">提示</string>
+  <string name="about_version">小企额 %s</string>
+  <string name="financing_name">融资</string>
+  <string name="financing_continue">继续</string>
+  <string name="financing_upgrade">对额度不满意?点此提升额度</string>
+  <string name="amount_calculation">额度计算结果</string>
+  <string name="amount_calculate">计算融资额度</string>
+  <string name="financing_selector">选择</string>
+
+  <string name="envelope_rules">红包规则</string>
+  <string name="my_envelope">我的红包</string>
+
+  <string name="tv_bill">对账单</string>
+  <string name="upload_photo">上传店铺照片</string>
+  <string name="tv_complete">完成</string>
+
+  <string name="user_pwd">修改密码</string>
+  <string name="change_password_current_hint">当前密码</string>
+  <string name="change_password_newpwd_hint">新密码</string>
+  <string name="change_password_acppwd_hint">确认新密码</string>
+
+  <string name="invited_record">邀请记录</string>
+  <string name="rule">活动规则</string>
+
+  <string name="financing_upload_credit">征信授权</string>
+  <string name="financing_upload_coupon">使用优惠券</string>
+  <string name="financing_upload_address">居住地址</string>
+  <string name="financing_upload_relative_type">直系亲属类型</string>
+  <string name="financing_upload_relative_name">直系亲属姓名</string>
+  <string name="financing_upload_relative_phone">直系亲属手机</string>
+  <string name="financing_upload_contact_name">紧急联系人姓名</string>
+  <string name="financing_upload_contact_phone">紧急联系人手机</string>
+  <string name="financing_upload_if_contract">是否有租赁合同</string>
+  <string name="financing_upload_host_phone">房东电话</string>
+  <string name="financing_upload_no_contract">未何没有租赁合同</string>
+  <string name="financing_upload_owner_name">业主姓名</string>
+  <string name="financing_upload_owner_phone">业主电话</string>
+  <string name="financing_upload_start_contract">合同开始日期</string>
+  <string name="financing_upload_end_contract">合同结束日期</string>
+  <string name="financing_upload_annual_trent">年租金</string>
+  <string name="financing_upload_unauthorized">未验证</string>
+  <string name="financing_upload_select">请选择</string>
+  <string name="financing_upload_example_name">例如：张三</string>
+  <string name="financing_upload_example_phone">例如：182****8888</string>
+  <string name="financing_upload_example_money">例如：88888</string>
+  <string name="financing_upload_door_example_img">示例图片</string>
+  <string name="financing_upload_door_plate">门牌照</string>
+  <string name="financing_upload_inside">店内照</string>
+  <string name="financing_upload_id_front">法人身份证正面复印件</string>
+  <string name="financing_upload_id_back">法人身份证反面复印件</string>
+
+  <string name="credit_reports_name">征信报告授权</string>
+  <string name="credit_reports_login_name">征信中心登录名</string>
+  <string name="username">登录名</string>
+  <string name="password">密码</string>
+  <string name="code">验证码</string>
+  <string name="check_code">校验码</string>
+  <string name="credit_reports__login_password">征信中心密码</string>
+  <string name="credit_reports_img_code">请输入图片验证码</string>
+  <string name="credit_reports_id_code">身份验证码</string>
+  <string name="credit_reports_credit_agreement">《征信报告协议》</string>
+  <string name="credit_reports_credit_how">如何授权</string>
+  <string name="credit_reports_credit_how_why"><u>如何授权？</u></string>
+  <string name="credit_reports_credit_agreement_web">征信报告授权协议</string>
+
+  <string name="mobile_verify_name">手机验证</string>
+  <string name="mobile_verify_username">姓名</string>
+  <string name="mobile_verify_username_hint">--</string>
+  <string name="mobile_verify_id">身份证号</string>
+  <string name="mobile_verify_id_hint">请输入身份证号</string>
+  <string name="mobile_verify_phone">手机号码</string>
+  <string name="mobile_verify_phone_hint">请输入手机号码</string>
+  <string name="mobile_verify_pwd">运营商服务密码</string>
+  <string name="mobile_verify_pwd_hint">请输入密码</string>
+  <string name="mobile_verify_code">运营商验证码</string>
+  <string name="mobile_verify_code_hint">请输入验证码</string>
+  <string name="mobile_verify_pwd_how">什么是运营商服务密码?</string>
+  <string name="mobile_verify_pwd_how_use">如无法确认手机服务密码，请联系手机运营商，提供身份证号码即可查询和修改\n\n手机认证即收集您号码的基本信息、账单信息、通话记录、上网记录、短信详单等用于认证服务。运营商会发短信告知您，我们从网上营业厅查询过您的详单，这是我们认证您信息的正常过程。</string>
+  <string name="mobile_verify_pwd_introduce">手机服务密码是你的号码在移动运营公司进行获取服务时需要提供的一个身份凭证，比如查询通话详单就需要提供身份证明或者服务密码\n\n这个密码是由移动运营商提供，可以自己修改的。</string>
+
+  <string name="pos_add_hint">请输入商编</string>
+  <string name="pos_add_advice">仅限添加本企业商编，否则将影响审批结果</string>
+  <string name="pos_add_introduction">什么是POS商编?</string>
+  <string name="pos_add_add">添加</string>
+  <string name="pos_verify_name">POS问题验证</string>
+  <string name="pos_verify_question">验证问题获取中&#8230;</string>
+  <string name="pos_verify_tip">温馨提示：请在验证信息前准备好小票材料，连续验证3次错误，将无法通过审核。</string>
+  <string name="pos_verify_commit">验证问题</string>
+
+  <string name="account_name">账户</string>
+  <string name="account_not_login">用户未登录</string>
+  <string name="account_my">我的商铺</string>
+  <string name="my_apply">我的申请</string>
+  <string name="account_add">+添加商铺</string>
+  <string name="account_qr_name">我的二维码</string>
+  <string name="account_hb">我的红包</string>
+  <string name="account_recommend">推荐专区</string>
+  <string name="account_invite">邀请好友赢红包</string>
+  <string name="account_qr_title">小企额，融资神器</string>
+  <string name="account_qr_msg">扫描下面二维码邀请商户注册</string>
+
+  <string name="financing_confirm">融资方案确认</string>
+  <string name="notice_factoring">融资保理通知书</string>
+
+  <string name="login_hint_account">请输入你的手机号</string>
+  <string name="login_hint_password">请输入6&#8211;16位密码</string>
+  <string name="login_agreement">卡得万利服务协议</string>
+
+  <string name="btn_commit">确认提交</string>
+  <string name="commit">确认</string>
+  <string name="getback">返回修改</string>
+  <string name="bank_account">银行账号</string>
+  <string name="bank_account_hint">请输入还款账户银行账号</string>
+  <string name="reserved_phone">预留手机</string>
+  <string name="reserved_phone_hint">请输入预留手机号码</string>
+  <string name="agree_card">同意《银行卡验证协议》</string>
+  <string name="card_security">银行卡验证</string>
+  <string name="check_bill">查看账单</string>
+  <string name="check_code_hint">请输入身份证校验码</string>
+  <string name="agree_authoriza">同意《征信报告授权协议》</string>
+  <string name="username_hint">请输入征信中心登录名</string>
+  <string name="password_hint">请输入征信中心的密码</string>
+  <string name="img_code">请输入图形验证码</string>
+  <string name="bank_account_private_hint">请输入银行账号</string>
+  <string name="open_bank">开户行</string>
+  <string name="open_bank_hint">请选择开户行</string>
+  <string name="lift_amount"><u>提升额度</u></string>
+
+
+  <string name="app_name">小企额</string>
+
+  <string name="login_name">登录</string>
+  <string name="login_mobile_phone_hint">请输入手机号码</string>
+  <string name="login_pwd_hint">请输入登录密码</string>
+  <string name="login_forgot_hint">注册账户表示您同意</string>
+  <string name="login_agree">同意</string>
+  <string name="register_name">注册</string>
+
+  <string name="forgot_pwd_name">忘记密码</string>
+  <string name="forgot_pwd_mobile_phone">请输入你的手机号</string>
+  <string name="forgot_pwd_new">请输入6&#8211;20位新密码</string>
+  <string name="forgot_pwd_code">请输入验证码</string>
+  <string name="forgot_pwd_agreement">卡得万利服务协议</string>
+  <string name="forgot_pwd_sms_hint">请输入图片验证码</string>
+  <string name="forgot_pwd_sms_code">短信验证码</string>
+  <string name="forgot_pwd_obtain_code">获取验证码</string>
+  <string name="forgot_pwd_invite_code">邀请码</string>
+  <string name="forgot_pwd_code_send">已发送验证码短信到</string>
+  <string name="forgot_pwd_code_null">--</string>
+  <string name="forgot_pwd_code_not">验证码收不到?</string>
+  <string name="forgot_pwd_code_service">联系客服</string>
+  <string name="forgot_pwd_commit">提交</string>
+  <string name="forgot_pwd_complete">完成</string>
+
+  <string name="home_name">首页</string>
+  <string name="home_no_announcements">暂无公告</string>
+  <string name="home_apply_tip">活动专区</string>
+  <string name="home_introduction_one_text">首批国家级</string>
+  <string name="home_introduction_one_hint">商业保理试点企业</string>
+  <string name="home_introduction_two_text">上海市政府认定</string>
+  <string name="home_introduction_two_hint">中小企业服务机构</string>
+  <string name="home_introduction_three_text">应收账款</string>
+  <string name="home_introduction_three_hint">登记居全国首席</string>
+  <string name="home_introduction_four_text">业务覆盖面积</string>
+  <string name="home_introduction_four_hint">全国32省份和直辖市</string>
+
+  <string name="apply_confirmation">申请信息确认</string>
+  <string name="apply_submitted">申请已提交</string>
+
+  <string name="my_name">我的</string>
+
+  <string name="more_phone">4008&#8211;803&#8211;803</string>
+  <string name="more_time">服务时间周一至周五：9:00&#8211;18:00</string>
+  <string name="more_faq">融资攻略</string>
+  <string name="more_introduction">公司简介</string>
+  <string name="more_honour">资质荣誉</string>
+  <string name="more_contact">联系方式</string>
+  <string name="more_about">关于我们</string>
+  <string name="more_feedback">意见反馈</string>
+  <string name="more_service">在线客服</string>
+  <string name="more_call_title">拨打客服电话</string>
+  <string name="more_call_yes">呼叫</string>
+  <string name="more_call_no">取消</string>
+  <string name="more_call_permission">无拨打电话权限</string>
+  <string name="credit_report_guide">征信报告授权引导</string>
+
+  <string name="web_load_tip">加载中&#8230;</string>
+
+  <string name="about_name">关于小企额</string>
+  <string name="about_wipe_cache_hint">清除缓存</string>
+  <string name="about_cache_clear_yes">清除</string>
+  <string name="about_cache_clear_no">取消</string>
+
+  <string name="finance_intention_name">融资意向</string>
+  <string name="finance_shops">融资店铺</string>
+  <string name="finance_use">融资用途</string>
+  <string name="finance_amount">意向融资金额</string>
+  <string name="finance_deadline">意向融资期限</string>
+  <string name="finance_deadline_three">三个月</string>
+  <string name="finance_deadline_six">六个月</string>
+  <string name="finance_deadline_nine">九个月</string>
+  <string name="finance_gift">可用红包</string>
+  <string name="finance_gift_money">0元</string>
+  <string name="finance_gift_tip">已按最优方案匹配红包</string>
+  <string name="finance_select">请选择</string>
+  <string name="finance_next">下一步</string>
+
+  <string name="user_info_name">完善个人信息</string>
+  <string name="user_info_representative_text">法定代表</string>
+  <string name="user_info_representative_hint">请输入法定代表人姓名</string>
+  <string name="user_info_id_number_text">身份证号</string>
+  <string name="user_info_id_number_hint">请输入身份证号</string>
+  <string name="user_info_residence_address_text">居住地址</string>
+  <string name="user_info_residence_address_hint">请选择省、市、区县</string>
+  <string name="user_info_detail_address_text">详细地址</string>
+  <string name="user_info_detail_address_hint">请输入详细地址如：街道、小区</string>
+  <string name="user_info_immediate_relatives_text">直系亲属</string>
+  <string name="user_info_immediate_relatives_hint">请输入直系亲属姓名</string>
+  <string name="user_info_relatives_mobile_text">亲属手机</string>
+  <string name="user_info_relatives_mobile_hint">请输入直系亲属手机</string>
+  <string name="user_info_relatives_type_text">亲属类型</string>
+  <string name="user_info_relatives_type_parents">父母</string>
+  <string name="user_info_relatives_type_children">子女</string>
+  <string name="user_info_relatives_type_spouse">配偶</string>
+  <string name="user_info_emergence_interconnection_text">紧急联络</string>
+  <string name="user_info_emergence_interconnection_hint">请输入紧急联络人姓名</string>
+  <string name="user_info_interconnection_mobile_text">联络手机</string>
+  <string name="user_info_interconnection_mobile_hint">请输入紧急联络人手机</string>
+  <string name="user_info_commit">提交</string>
+
+  <string name="finance_way_name">算算融资额度</string>
+  <string name="finance_way_banner_tip">请完成以下一个或多个信息后进行额度计算</string>
+  <string name="finance_way_pos_text">POS流水</string>
+  <string name="finance_way_pos_tip">您可以继续添加POS商编</string>
+  <string name="finance_way_alipay_text">支付宝</string>
+  <string name="finance_way_commit">开始计算</string>
+
+  <string name="shop_select_name">店铺选择</string>
+  <string name="shop_select_add">新增店铺</string>
+  <string name="shop_select_item_lose_efficacy_hint">以下店铺正在申请中，暂不允许选择切换和修改</string>
+  <string name="shop_select_item_lose_efficacy_icon">已锁定</string>
+
+  <string name="shop_add_name">添加店铺</string>
+  <string name="shop_add_industry">所属行业</string>
+  <string name="shop_add_id">营业执照注册号</string>
+  <string name="shop_add_id_input">请输入营业注册号</string>
+  <string name="shop_add_address">营业地址</string>
+  <string name="shop_add_number">门店数</string>
+  <string name="shop_add_number_hint">请输入门店数</string>
+  <string name="shop_add_company_name">企业经营名称</string>
+  <string name="shop_add_company_name_hint">请输入企业经营名称</string>
+  <string name="shop_add_has_agreement">是否有店铺租赁合同</string>
+  <string name="shop_add_why_agreement">无店铺租赁合同原因</string>
+  <string name="shop_add_owner_name">业主姓名</string>
+  <string name="shop_add_owner_name_hint">请输入业主姓名</string>
+  <string name="shop_add_owner_phone">业主联系电话</string>
+  <string name="shop_add_owner_phone_hint">请输入业主联系电话</string>
+  <string name="shop_add_landlord_name">房东姓名</string>
+  <string name="shop_add_landlord_phone">房东联系电话</string>
+  <string name="shop_add_landlord_name_hint">请输入房东姓名</string>
+  <string name="shop_add_landlord_phone_hint">如为自有房产，请输入本人电话号码</string>
+  <string name="shop_add_upload_start_contract">合同开始日期</string>
+  <string name="shop_add_upload_end_contract">合同结束日期</string>
+  <string name="shop_add_upload_annual_trent">年租金</string>
+  <string name="shop_add_upload_annual_trent_hint">请输入金额(元)</string>
+  <string name="shop_add_select">请选择</string>
+  <string name="shop_add_commit">提交</string>
+
+  <string name="search_name">搜索</string>
+  <string name="search_hit">例如：北张家浜路88号</string>
+
+  <string name="pos_management_name">商编管理</string>
+  <string name="pos_management_text_hint">至少存在一个已验证的商编才能完成POS流水额度计算！</string>
+  <string name="pos_add_name">添加商编</string>
+  <string name="pos_add_item_name">POS机商编</string>
+  <string name="pos_add_item_name_hint">请输入一个POS编号</string>
+  <string name="pos_add_commit">添加并验证</string>
+  <string name="pos_add_dialog_verify_name">POS验证</string>
+  <string name="pos_add_dialog_verify_hint">添加商编前，请先完成该商编的验证操作</string>
+
+  <string name="user_details_name">个人信息</string>
+  <string name="user_details_user_name">姓名：</string>
+  <string name="user_details_user_phone">手机号：</string>
+  <string name="user_details_user_id">身份证：</string>
+  <string name="user_details_user_pwd">修改密码：</string>
+  <string name="user_details_user_logout">退出账号</string>
+
+  <string name="message_center">消息中心</string>
+
+  <string name="viewpager_indicator">%1$d/%2$d</string>
+
+  <string name="upload_url"><u>http://www.cvbaoli.com/book.doc</u></string>
+
+
+  <string-array name="home_refresh_color">
+    <item>@color/app_blue</item>
+  </string-array>
+
+</resources>

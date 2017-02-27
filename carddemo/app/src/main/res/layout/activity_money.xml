@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fadeScrollbars="true"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical"
+  tools:context="com.cardvlaue.sys.redenvelope.MoneyActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/title_default_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/title_height"
+      android:background="@color/white"
+      app:popupTheme="@style/AppTheme.PopupOverlay">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+          android:id="@+id/title_default_left"
+          android:layout_width="40dp"
+          android:layout_height="match_parent"
+          android:layout_centerVertical="true"
+          android:drawableLeft="@mipmap/ic_back_black"
+          android:maxLength="4"
+          android:textColor="@color/white"
+          android:textSize="@dimen/title_size_other" />
+
+        <TextView
+          android:id="@+id/title_default_middle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="@string/account_hb"
+          android:textColor="@color/c7c7c"
+          android:textSize="@dimen/title_size_middle" />
+
+        <TextView
+          android:id="@+id/title_content"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_centerInParent="true"
+          android:layout_toLeftOf="@+id/title_default_right"
+          android:layout_toRightOf="@id/title_default_middle"
+          android:text="选择(0)"
+          android:textColor="@color/c7c7c"
+          android:textSize="@dimen/title_size_middle" />
+
+
+        <TextView
+          android:id="@+id/title_default_right"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:gravity="right"
+          android:maxLength="4"
+          android:textColor="@color/white"
+          android:textSize="@dimen/title_size_other" />
+      </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:id="@+id/scrollView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fadingEdge="none"
+      android:fillViewport="false"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cardvlaue.sys.redenvelope.MyListView
+          android:id="@+id/message"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+
+    <LinearLayout
+      android:id="@+id/ly_img_none"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:visibility="visible">
+
+      <ImageView
+        android:id="@+id/img_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:src="@mipmap/icon_none1"
+        android:visibility="visible" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="暂无内容"
+        android:textColor="@color/app_blue"
+        android:textSize="20sp" />
+    </LinearLayout>
+
+  </LinearLayout>
+</LinearLayout>

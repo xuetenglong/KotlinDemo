@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:background="@drawable/dialog_radius"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tv_tip_msg"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginLeft="@dimen/fab_margin"
+      android:layout_marginRight="@dimen/fab_margin"
+      android:paddingBottom="6dp"
+      android:paddingLeft="6dp"
+      android:paddingRight="6dp"
+      android:gravity="center"
+      android:minHeight="40dp"
+      android:text="--"
+      android:textColor="@color/black" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#D1D1D1" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btn_user_detail_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selector_register_button_left"
+        android:text="@string/cancel"
+        android:textColor="#1E90FF" />
+
+      <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#D1D1D1" />
+
+      <Button
+        android:id="@+id/btn_user_detail_ok"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selector_register_button_right"
+        android:text="@string/ok"
+        android:textColor="#1E90FF" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

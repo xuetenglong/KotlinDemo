@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/shape_my_bg_credit"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:id="@+id/ll_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:background="#fff7d6"
+          android:visibility="gone">
+
+          <ImageView
+            android:id="@+id/iv_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:src="@mipmap/icon_radio" />
+
+          <TextView
+            android:id="@+id/tv_radio"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_toRightOf="@+id/iv_view"
+            android:paddingLeft="6dp"
+            android:drawableRight="@mipmap/ic_small_arrow"
+            android:gravity="center_vertical"
+            android:text="近期由于系统维护、广西、广东手机将不能验证"
+            android:textColor="@color/ff9000"
+            android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="165dp"
+          android:background="@color/white">
+
+          <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_call" />
+        </RelativeLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="手机号码" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_mobile_verify_phone"
+              style="@style/public_text_right"
+              android:enabled="false"
+              android:hint="请输入手机号码"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              app:inputLabel="手机号码"
+              app:inputName="phoneuser"
+              app:pageName="手机验证" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="服务密码" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_mobile_verify_pwd"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="7"
+              android:background="@null"
+              android:hint="请输入手机服务密码"
+              android:inputType="textPassword"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColorHint="@color/b9b9b9"
+              android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+              android:textSize="14sp"
+              app:inputLabel="手机服务密码"
+              app:inputName="phonepwd"
+              app:pageName="手机验证" />
+
+            <RelativeLayout
+              android:id="@+id/iv_detail"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_gravity="center_vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_explain" />
+            </RelativeLayout>
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/ly_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout style="@style/lines_dbdbdb" />
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="58dp"
+              android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/queryPwdText"
+                style="@style/public_text"
+                android:text="短信验证" />
+
+              <com.cardvlaue.sys.util.EditData
+                android:id="@+id/et_mobile_verify_code"
+                style="@style/public_text_right"
+                android:hint="请输入短信验证码"
+                app:inputLabel="短信验证码"
+                app:inputName="mobileverifycode"
+                app:pageName="手机验证" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tv_file"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="16dp"
+          android:paddingLeft="22dp"
+          android:paddingRight="16dp"
+          android:background="@color/f4f4f4"
+          android:gravity="center_vertical"
+          android:lineSpacingMultiplier="1.5"
+          android:text="尊敬的用户，由于移动、联通等运营商的区别，在验证手机过程中可能会收到多条验证码，如遇到这一情况，请按照收到验证码的先后顺序依次输入提交。"
+          android:textColor="@color/ff9000"
+          android:textSize="14sp" />
+      </LinearLayout>
+    </ScrollView>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/mobile_verify_submit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selector_button_straight"
+    android:gravity="center"
+    android:text="提交"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</RelativeLayout>

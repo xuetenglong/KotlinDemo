@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="58dp">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_radius_top"
+        android:gravity="center"
+        android:text="进入下一步前，完成以下验证"
+        android:textColor="#a1a1a1"
+        android:textSize="13sp" />
+
+      <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="8dp"
+        android:src="@mipmap/ic_bg_cancel" />
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:paddingTop="16dp"
+      android:paddingBottom="16dp"
+      android:background="@drawable/dialog_radius_bottom"
+      android:orientation="vertical">
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/cv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true">
+
+
+        <RelativeLayout
+          android:id="@+id/rl_phone"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center">
+
+          <TextView
+            android:paddingLeft="20dp"
+            android:drawablePadding="14dp"
+            android:id="@+id/iv_isJxlValid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:drawableLeft="@mipmap/icon_isjxlvalid"
+            android:text="手机验证"/>
+
+          <TextView
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_isJxlValid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="未验证"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/app_blue"
+            android:background="@drawable/selector_register_get_code"
+            android:textSize="10sp" />
+        </RelativeLayout>
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/cv_credit"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true">
+        <RelativeLayout
+          android:id="@+id/rl_credit"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center">
+
+          <TextView
+            android:paddingLeft="20dp"
+            android:drawablePadding="14dp"
+            android:id="@+id/iv_creditReportStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:drawableLeft="@mipmap/icon_creditreportstatus"
+            android:textColor="#222222"
+            android:text="征信验证"/>
+
+
+          <TextView
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_creditReportStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="未验证"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/app_blue"
+            android:background="@drawable/selector_register_get_code"
+            android:textSize="10sp" />
+        </RelativeLayout>
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/cv_face"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+          android:id="@+id/rl_face"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center">
+          <TextView
+            android:paddingLeft="20dp"
+            android:drawablePadding="14dp"
+            android:id="@+id/iv_isFace"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:drawableLeft="@mipmap/icon_isface"
+            android:text="人脸识别"/>
+
+          <TextView
+            android:layout_marginRight="14dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_isFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="未验证"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/app_blue"
+            android:background="@drawable/selector_register_get_code"
+            android:textSize="10sp" />
+        </RelativeLayout>
+      </android.support.v7.widget.CardView>
+
+
+
+      <RelativeLayout
+        android:visibility="gone"
+        android:background="@drawable/icon_bg_cr"
+        android:id="@+id/rl_faces"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+          android:paddingLeft="20dp"
+          android:drawablePadding="14dp"
+          android:layout_centerVertical="true"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:textSize="15sp"
+          android:textColor="#222222"
+          android:drawableLeft="@mipmap/icon_isface"
+          android:text="人脸识别"/>
+
+        <TextView
+          android:layout_marginRight="14dp"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+
+          android:text="未验证"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:paddingTop="5dp"
+          android:paddingBottom="5dp"
+          android:textColor="@color/app_blue"
+          android:background="@drawable/selector_register_get_code"
+          android:textSize="10sp" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="遇到问题?"
+        android:textColor="#f7f7f7"
+        android:textSize="15sp" />
+
+      <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击跳过"
+        android:textColor="#ffb15d"
+        android:textSize="15sp" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>
+
+

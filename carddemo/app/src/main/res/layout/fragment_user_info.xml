@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_background"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical"
+  tools:context=".userinfo.UserInfoActivity">
+
+  <include layout="@layout/title_bar_white" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:orientation="vertical">
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_representative_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_representative"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:hint="@string/user_info_representative_hint"
+          android:inputType="textPersonName"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:inputLabel="法定代表人姓名"
+          app:inputName="ownerName"
+          app:pageName="完善信息" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_id_number_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_id_card"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:hint="@string/user_info_id_number_hint"
+          android:inputType="text"
+          app:inputLabel="身份证号"
+          app:inputName="idCard"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          app:pageName="完善信息" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_residence_address_text" />
+
+        <TextView
+          android:id="@+id/tv_user_info_residence_address"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          android:text="@string/user_info_residence_address_hint"
+          android:textColor="@color/shop_add_text_hint" />
+
+        <ImageView
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:contentDescription="@string/user_info_name"
+          android:src="@mipmap/icon_more" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_detail_address_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_detail_address"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:hint="@string/user_info_detail_address_hint"
+          android:inputType="textPostalAddress"
+          app:inputLabel="街道、小区"
+          app:inputName="address"
+          app:pageName="完善信息" />
+      </LinearLayout>
+
+      <LinearLayout
+        style="@style/lists_item_container"
+        android:layout_marginTop="10dp">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_immediate_relatives_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_immediate_relatives"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          android:hint="@string/user_info_immediate_relatives_hint"
+          android:inputType="textPersonName"
+          app:inputLabel="直系亲属姓名"
+          app:inputName="immediaterelatives"
+          app:pageName="完善信息" />
+
+        <ImageButton
+          android:id="@+id/ib_user_info_immediate_relatives_add"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:background="@color/transparent"
+          android:contentDescription="@string/user_info_name"
+          android:src="@mipmap/icon_user_info_add_people" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_relatives_mobile_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_relatives_mobile"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:hint="@string/user_info_relatives_mobile_hint"
+          android:inputType="phone"
+          app:inputLabel="直系亲属手机"
+          app:inputName="relativesmobile"
+          app:pageName="完善信息" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:text="@string/user_info_relatives_type_text" />
+
+        <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <RadioGroup
+            android:id="@+id/rg_user_info_relationship"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+              android:id="@+id/rb_user_info_three"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:background="@drawable/selector_user_info_relatives_type_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/user_info_relatives_type_parents"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+
+            <RadioButton
+              android:id="@+id/rb_user_info_six"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/selector_user_info_relatives_type_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/user_info_relatives_type_children"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+
+            <RadioButton
+              android:id="@+id/rb_user_info_nine"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:background="@drawable/selector_user_info_relatives_type_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/user_info_relatives_type_spouse"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+          </RadioGroup>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+              android:id="@+id/view_user_info_three"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+
+            <View
+              android:id="@+id/view_user_info_six"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+
+            <View
+              android:id="@+id/view_user_info_nine"
+              android:layout_width="0dp"
+              android:layout_height="32dp"
+              android:layout_weight="1"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+          </LinearLayout>
+        </FrameLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        style="@style/lists_item_container"
+        android:layout_marginTop="10dp">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_emergence_interconnection_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_emergence_interconnection"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          android:hint="@string/user_info_emergence_interconnection_hint"
+          android:inputType="textPersonName"
+          app:inputLabel="紧急联络人姓名"
+          app:inputName="emergenceinterconnection"
+          app:pageName="完善信息" />
+
+        <ImageButton
+          android:id="@+id/ib_user_info_emergence_interconnection_add"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:background="@color/transparent"
+          android:contentDescription="@string/user_info_name"
+          android:src="@mipmap/icon_user_info_add_people" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:text="@string/user_info_interconnection_mobile_text" />
+
+        <com.cardvlaue.sys.util.EditData
+          android:id="@+id/et_user_info_interconnection_mobile"
+          style="@style/lists_item_text"
+          android:layout_width="0dp"
+          android:textAppearance="@style/TextAppearance.FontPath"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:hint="@string/user_info_interconnection_mobile_hint"
+          android:inputType="phone"
+          app:inputLabel="紧急联络人手机"
+          app:inputName="interconnectionmobile"
+          app:pageName="完善信息" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+  <Button
+    android:id="@+id/btn_user_info_commit"
+    style="@style/lists_commit_button"
+    android:text="@string/user_info_commit" />
+</LinearLayout>

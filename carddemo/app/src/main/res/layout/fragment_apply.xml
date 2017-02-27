@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/f4f4f4"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+      android:id="@+id/view_home_bar"
+      android:layout_width="match_parent"
+      android:layout_height="24dp" />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginEnd="@dimen/activity_horizontal_margin"
+      android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+      <TextView
+        android:id="@+id/title_default_left"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:maxLength="4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size_other" />
+
+      <TextView
+        android:id="@+id/title_default_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="我的申请"
+        android:textColor="#343434"
+        android:textSize="@dimen/title_size_middle" />
+
+      <!--@mipmap/ic_add_apply-->
+      <TextView
+        android:id="@+id/title_default_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/title_default_middle"
+        android:layout_toRightOf="@id/title_default_middle"
+        android:gravity="end"
+        android:text="添加申请"
+        android:textColor="@color/app_main_color"
+        android:textSize="@dimen/title_size_other" />
+    </RelativeLayout>
+  </LinearLayout>
+
+  <com.cardvlaue.sys.my.IosScrollViewLayout
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:overScrollMode="never"
+    android:visibility="gone">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_apply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:transcriptMode="alwaysScroll" />
+    </LinearLayout>
+  </com.cardvlaue.sys.my.IosScrollViewLayout>
+
+  <LinearLayout
+    android:id="@+id/ll_no_apply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+      android:id="@+id/ly_img_none"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <ImageView
+        android:id="@+id/img_none"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/no_application" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="暂无内容"
+        android:textColor="@color/c7c7c"
+        android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="34dp"
+      android:layout_gravity="center"
+      android:paddingTop="10dp"
+      android:text="您当前还没有一笔融资记录，赶快去申请吧！"
+      android:textColor="@color/c7c7c"
+      android:textSize="12sp" />
+
+    <Button
+      android:id="@+id/btn_apply_commit"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="146dp"
+      android:layout_height="44dp"
+      android:layout_gravity="center"
+      android:background="@drawable/selector_button_rectangle"
+      android:text="立即申请"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+  </LinearLayout>
+</LinearLayout>

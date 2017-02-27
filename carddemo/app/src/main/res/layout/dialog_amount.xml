@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="58dp">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_radius_top"
+        android:gravity="center"
+        android:text="进入下一步前，完成以下验证"
+        android:textColor="#a1a1a1"
+        android:textSize="13sp" />
+
+      <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="8dp"
+        android:src="@mipmap/ic_bg_cancel" />
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="315dp"
+      android:background="@drawable/dialog_radius_bottom"
+      android:orientation="vertical">
+
+
+      <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+          android:id="@+id/iv_isJxlValid"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:src="@mipmap/icon_phone_verificat" />
+
+        <TextView
+          android:id="@+id/tv_isJxlValid"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/iv_isJxlValid"
+          android:layout_centerInParent="true"
+          android:paddingTop="15dp"
+          android:gravity="center_horizontal"
+          android:text="手机验证"
+          android:textColor="@color/app_blue"
+          android:textSize="15sp" />
+
+
+      </RelativeLayout>
+
+      <FrameLayout
+        style="@style/lines_dbdbdb"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp" />
+
+      <RelativeLayout
+        android:id="@+id/rl_credit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+          android:id="@+id/iv_creditReportStatus"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:src="@mipmap/ic_credits" />
+
+        <TextView
+          android:id="@+id/tv_creditReportStatus"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_below="@+id/iv_creditReportStatus"
+          android:layout_centerInParent="true"
+          android:paddingTop="15dp"
+          android:gravity="center_horizontal"
+          android:text="征信验证"
+          android:textColor="@color/ff9000"
+          android:textSize="15sp" />
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="遇到问题?"
+        android:textColor="#f7f7f7"
+        android:textSize="15sp" />
+
+      <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击跳过"
+        android:textColor="#ffb15d"
+        android:textSize="15sp" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>
+
+
+  <!--
+  <?xml version="1.0" encoding="utf-8"?>
+  <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="270dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:background="@drawable/shape_pos_add_dialog_bg"
+          android:orientation="vertical">
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="70dp"
+              android:background="#F0F2F5">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/pos_add_dialog_verify_name"
+                      android:textColor="#555555"
+                      android:textSize="15sp" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="@string/pos_add_dialog_verify_hint"
+                      android:textColor="#A1A1A1"
+                      android:textSize="12sp" />
+              </LinearLayout>
+
+              <ImageView
+                  android:id="@+id/iv_pos_add_dialog_close"
+                  android:layout_width="28dp"
+                  android:layout_height="32dp"
+                  android:layout_gravity="end"
+                  android:layout_marginEnd="11dp"
+                  android:layout_marginRight="11dp"
+                  android:contentDescription="@string/pos_add_name"
+                  android:src="@mipmap/ic_bg_cancel" />
+          </FrameLayout>
+
+          <TextView
+              android:id="@+id/tv_pos_add_dialog_question"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginLeft="@dimen/activity_horizontal_margin"
+              android:layout_marginRight="@dimen/activity_horizontal_margin"
+              android:layout_marginTop="20dp"
+              android:textColor="#464646"
+              android:textSize="13sp" />
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/rv_pos_add_dialog_verify"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="25dp"
+              android:layout_marginTop="10dp" />
+      </LinearLayout>
+  </FrameLayout>
+  -->
+

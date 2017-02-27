@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="180dp"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@drawable/dialog_radius"
+  android:gravity="center"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="6dp"
+    android:gravity="center"
+    android:text="提现信息"
+    android:textSize="14sp" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="真实姓名：" />
+
+      <TextView
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_toRightOf="@id/tv_name"
+        android:paddingLeft="6dp"
+        android:background="@null"
+        android:gravity="left"
+        android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/tv_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="银行卡账号：" />
+
+      <TextView
+        android:id="@+id/ed_card"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_toRightOf="@id/tv_card"
+        android:paddingLeft="6dp"
+        android:background="@null"
+        android:gravity="left"
+        android:inputType="number"
+        android:textSize="14sp" />
+    </RelativeLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="1dip"
+    android:background="#D1D1D1" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/cancel_btn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/left_btn_select"
+      android:text="@string/cancel"
+      android:textColor="@color/btntextcolor"
+      android:textSize="14sp" />
+
+    <LinearLayout
+      android:layout_width="1dp"
+      android:layout_height="match_parent"
+      android:background="#D1D1D1" />
+
+    <Button
+      android:id="@+id/confirm_btn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/right_btn_select"
+      android:text="@string/commit"
+      android:textColor="@color/btntextcolor"
+      android:textSize="14sp" />
+  </LinearLayout>
+
+</LinearLayout>

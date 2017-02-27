@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/activity_bill_details"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical"
+  tools:context="com.cardvlaue.sys.bill.BillDetailsActivity">
+
+
+  <include layout="@layout/title_default" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/f4f4f4" />
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="36dp"
+    android:layout_marginBottom="36dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:drawableLeft="@mipmap/bill_detail"
+      android:drawablePadding="12dp"
+      android:gravity="center"
+      android:text="还款代扣" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="20dp"
+      android:text="-100,000"
+      android:textColor="@color/app_blue"
+      android:textSize="30sp" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="20dp"
+      android:text="交易失败"
+      android:textColor="#9f9f9f"
+      android:textSize="17sp" />
+  </LinearLayout>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transcriptMode="alwaysScroll" />
+
+</LinearLayout>

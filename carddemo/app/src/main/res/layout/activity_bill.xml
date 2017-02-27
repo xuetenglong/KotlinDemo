@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tv"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:paddingLeft="25dp"
+          android:paddingRight="25dp"
+          android:background="@color/white"
+          android:drawableLeft="@mipmap/icon_bill"
+          android:drawablePadding="16dp"
+          android:gravity="center_vertical"
+          android:lineSpacingMultiplier="1.5"
+          android:text="为确保您的良好记录还款，请在每日还款日前一晚检查还款账户有足够款项"
+          android:textColor="@color/c7c7c"
+          android:textSize="12sp" />
+
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="58dp"
+          android:background="@color/white"
+          android:orientation="horizontal">
+          <!-- 还款清算的  item -->
+
+          <TextView
+            style="@style/title_12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="应还日期" />
+
+          <TextView
+            style="@style/title_12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="应还金额" />
+
+          <TextView
+            style="@style/title_12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="实还日期" />
+
+          <TextView
+            style="@style/title_12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="实还金额" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/rv_bill"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white" />
+
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+  </LinearLayout>
+</RelativeLayout>

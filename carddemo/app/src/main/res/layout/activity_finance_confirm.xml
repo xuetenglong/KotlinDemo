@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true">
+  <!-- 融资方案确认 -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="50dp"
+      android:background="@drawable/shape_my_bg_credit"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="250dp"
+          android:background="@color/white"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_sure" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="21dp"
+            android:text="融资方案已生成"
+            android:textColor="@color/text_vice"
+            android:textSize="16sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您提交的申请材料已经通过我们初步审核！"
+            android:textColor="#a0a0a0"
+            android:textSize="12sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:text="以下为我们为您提供的融资方案"
+            android:textColor="#a0a0a0"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:transcriptMode="alwaysScroll" />
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="30dp" />
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/btn_submit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_weight="1"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selector_button_straight"
+    android:text="@string/commit"
+    android:textColor="@color/white"
+    android:textSize="17sp" />
+</RelativeLayout>

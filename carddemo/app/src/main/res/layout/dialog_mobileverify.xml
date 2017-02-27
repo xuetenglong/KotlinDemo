@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rl_mobile"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="120dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      android:gravity="center"
+      android:text="公告"
+      android:textColor="#1E90FF"
+      android:textSize="18sp" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="18dp"
+      android:background="@drawable/selector_register_button_right"
+      android:gravity="left|center_vertical"
+      android:lineSpacingMultiplier="1.5"
+      android:text="近期由于系统维护、关西、广东手机用户不能完成验证，给你造成不便，敬请谅解！如有疑问可以随时拨打我们的服务热线：4008-803-803"
+      android:textColor="#1E90FF" />
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/iv_cancel"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_margin="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="true"
+    android:src="@mipmap/icon_mobile_cancel" />
+
+</RelativeLayout>

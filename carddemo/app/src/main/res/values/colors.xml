@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="text_vice">#343434</color>
+  <color name="ababab">#ababab</color>
+  <color name="dbdbdb">#dbdbdb</color>
+  <color name="e1e1e1">#e1e1e1</color>
+  <color name="my_shop">#6e6e6e</color>
+  <color name="ff9000">#ff9000</color>
+  <color name="f4f4f4">#f4f4f4</color>
+  <color name="b9b9b9">#b9b9b9</color>
+  <color name="c8c8ce">#c8c8ce</color>
+  <color name="c7c7c">#7c7c7c</color>
+  <color name="background_tab_pressed">#6633B5E5</color>
+  <color name="btntextcolor">#ff1E90FF</color>
+  <color name="c5c5c5">#c5c5c5</color>
+
+
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+  <color name="CCCCCC">#CCCCCC</color>
+  <color name="white">#FFF</color>
+  <color name="black">#000</color>
+  <color name="red">#F00</color>
+  <color name="green">#0F0</color>
+  <color name="blue">#00F</color>
+  <color name="transparent">#0000</color>
+
+  <color name="app_blue">#359DF5</color>
+
+  <color name="app_background">#F4F4F4</color>
+
+  <color name="lists_item_text_left">#343434</color>
+
+  <color name="shop_add_text_hint">#B9B9B9</color>
+
+  <color name="app_main_color">#359DF5</color>
+  <color name="app_background_color">#F4F4F4</color>
+  <color name="home_background_color">#EFEFEF</color>
+  <color name="text_big_color">#333333</color>
+  <color name="text_small_color">#7C7C7C</color>
+</resources>

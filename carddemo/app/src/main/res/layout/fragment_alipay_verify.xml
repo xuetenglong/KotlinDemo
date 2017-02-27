@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_blue"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/f4f4f4"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="28dp"
+          android:paddingLeft="12dp"
+          android:background="#eef9ed"
+          android:drawableLeft="@mipmap/alipay_error"
+          android:drawablePadding="6dp"
+          android:gravity="center_vertical"
+          android:text="请优先填写您的商家版支付宝账号，授信额度会更高"
+          android:textColor="#00ad35"
+          android:textSize="12sp" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="165dp"
+          android:background="@color/white">
+
+          <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_ali" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="支付宝登录名" />
+
+            <EditText
+              android:id="@+id/et_user"
+              style="@style/public_text_right"
+              android:paddingLeft="12dp"
+              android:hint="邮箱/手机/淘宝会员名"
+              android:textAppearance="@style/TextAppearance.FontPath" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="支付宝密码" />
+
+            <EditText
+              android:id="@+id/et_pwd"
+              style="@style/public_text_right"
+              android:paddingLeft="12dp"
+              android:hint="@string/mobile_verify_pwd_hint"
+              android:inputType="textPassword"
+              android:textAppearance="@style/TextAppearance.FontPath" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:id="@+id/ly_code"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/code" />
+
+            <EditText
+              android:id="@+id/et_img_code"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="5"
+              android:paddingLeft="12dp"
+              android:background="@null"
+              android:hint="请输入验证码"
+              android:textColorHint="@color/b9b9b9" />
+
+            <TextView
+              android:id="@+id/resendCode"
+              android:layout_width="wrap_content"
+              android:layout_height="27dp"
+              android:layout_gravity="center_vertical"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:background="@drawable/selector_login_button"
+              android:gravity="center"
+              android:text="@string/forgot_pwd_obtain_code"
+              android:textColor="@color/white"
+              android:textSize="12sp" />
+
+          </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="12dp">
+
+          <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_aliay"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="已通过国家权威安全监控"
+            android:textColor="#00ad35"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/tv_credit_reports_how"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="《支付宝授权协议》"
+            android:textColor="@color/app_blue" />
+
+        </RelativeLayout>
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/btn_submit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/app_blue"
+    android:gravity="center"
+    android:text="验证"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+  <!--没有申请的时候，显示的界面   f4f4f4   android:clipToPadding="true"
+  android:fitsSystemWindows="true"-->
+  <include layout="@layout/title_default" />
+
+  <LinearLayout
+    android:id="@+id/ly_img_none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+      android:id="@+id/img_none"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:layout_marginBottom="20dp"
+      android:layout_gravity="center_horizontal"
+      android:contentDescription="@null"
+      android:src="@mipmap/icon_none1" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="暂无内容"
+      android:textColor="@color/app_blue"
+      android:textSize="20sp" />
+  </LinearLayout>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:layout_gravity="center"
+    android:paddingTop="10dp"
+    android:text="您当前还没有一笔融资记录，赶快去申请吧！"
+    android:textColor="@color/c7c7c"
+    android:textSize="12dp" />
+
+  <Button
+    android:id="@+id/btn_apply_commit"
+    android:layout_width="146dp"
+    android:layout_height="44dp"
+    android:layout_gravity="center"
+    android:background="@drawable/selector_button_rectangle"
+    android:text="立即申请"
+    android:textColor="@color/white"
+    android:textSize="16sp" />
+</LinearLayout>

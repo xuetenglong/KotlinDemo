@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="180dp"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@drawable/dialog_radius"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="6dp"
+    android:gravity="center"
+    android:text="提现信息"
+    android:textSize="14sp" />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="请输入您的真实姓名和卡号"
+    android:textSize="12sp" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@drawable/code_shape1"
+    android:orientation="vertical">
+
+    <EditText
+      android:id="@+id/ed_name"
+      android:layout_width="match_parent"
+      android:layout_height="32dp"
+      android:paddingLeft="6dp"
+      android:background="@null"
+      android:gravity="left|center_vertical"
+      android:hint="请输入姓名"
+      android:textSize="14sp" />
+
+    <FrameLayout style="@style/lines_dbdbdb" />
+
+    <EditText
+      android:id="@+id/ed_card"
+      android:layout_width="match_parent"
+      android:layout_height="32dp"
+      android:paddingLeft="6dp"
+      android:background="@null"
+      android:gravity="left|center_vertical"
+      android:hint="请输入银行卡号"
+      android:inputType="number"
+      android:textSize="14sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="1dip"
+    android:background="#D1D1D1" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:id="@+id/cancel_btn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/left_btn_select"
+      android:text="@string/cancel"
+      android:textColor="@color/app_blue"
+      android:textSize="14sp" />
+
+    <LinearLayout
+      android:layout_width="1dp"
+      android:layout_height="match_parent"
+      android:background="#D1D1D1" />
+
+    <Button
+      android:id="@+id/confirm_btn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/right_btn_select"
+      android:text="@string/commit"
+      android:textColor="@color/btntextcolor"
+      android:textSize="14sp" />
+  </LinearLayout>
+
+</LinearLayout>

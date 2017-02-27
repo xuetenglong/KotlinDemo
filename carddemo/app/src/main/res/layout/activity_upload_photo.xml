@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rl_upload_photo_container"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="52dp"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_my_bg_credit"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <View
+            android:id="@+id/view_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/f4f4f4"
+            android:visibility="gone" />
+
+          <LinearLayout
+            android:id="@+id/ly_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+              android:id="@+id/ry_no"
+              android:layout_width="match_parent"
+              android:layout_height="54dp">
+
+              <FrameLayout
+                style="@style/lines_dbdbdb"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_text" />
+
+              <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:layout_centerInParent="true"
+                android:text="确认书上传操作步骤"
+                android:textColor="#000000" />
+
+              <FrameLayout
+                style="@style/lines_dbdbdb"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_text"
+                android:background="#dcdcdc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="6dp">
+
+              <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="6dp"
+                android:text="长按复制确认书模板地址:"
+                android:textColor="#3d3d3d"
+                android:textSize="13sp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"/>
+
+              <TextView
+                android:background="@drawable/background_tv_copy"
+                android:id="@+id/tv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv1"
+                android:text="@string/upload_url"
+                android:textColor="@color/app_blue"
+                android:textSize="13sp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"/>
+
+              <!--  android:textIsSelectable="true"-->
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+
+              <View
+                android:id="@+id/tv2"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv2"
+                android:lineSpacingExtra="6dp"
+                android:text="复制以上链接到您的“电脑“浏览器中打开并进行下载(注意:以上链接区分大小写);"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+
+              <View
+                android:id="@+id/tv3"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv3"
+                android:lineSpacingExtra="6dp"
+                android:text="下载完成以后请使用打印机进行打印模板"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+
+              <View
+                android:id="@+id/tv4"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv4"
+                android:lineSpacingExtra="6dp"
+                android:text="打印结束以后，请在打印的纸质确认书"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+
+              <View
+                android:id="@+id/tv5"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv5"
+                android:lineSpacingExtra="6dp"
+                android:text="纸质确认书填写完毕以后，请按照以下确认书照片分类要求,依次进行拍照上传"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+
+              <View
+                android:id="@+id/tv6"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv6"
+                android:lineSpacingExtra="6dp"
+                android:text="以上链接请在浏览器中打开，请按照大小写严格输入"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp">
+              visible
+              <View
+                android:id="@+id/tv7"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_over_blue" />
+
+              <TextView
+                android:id="@+id/tv_upload_photo_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv7"
+                android:lineSpacingExtra="6dp"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+            </RelativeLayout>
+          </LinearLayout>
+
+          <RelativeLayout
+            android:id="@+id/rl_upload_photo_tip"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <ImageView
+              android:id="@+id/iv_pic"
+              android:layout_width="36dp"
+              android:layout_height="36dp"
+              android:layout_marginRight="10dp"
+              android:src="@mipmap/icon_photo_shop" />
+
+            <TextView
+              android:id="@+id/tv_upload_photo_tip_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/iv_pic"
+              android:lineSpacingMultiplier="1.5"
+              android:text="最后一步啦！完成此步骤，您的融资申请将会被提交。请务必保证以下照片上传时清晰可见！"
+              android:textColor="@color/c7c7c"
+              android:textSize="12sp" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/f4f4f4" />
+
+          <TextView
+            android:id="@+id/tv_upload_photo_hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:lineSpacingMultiplier="1.5"
+            android:text="注：点击图片右上角蓝色数字图标，可查看该分类下示例图片和上传的所有图片。"
+            android:textColor="@color/ff9000"
+            android:textSize="12sp" />
+
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+            <android.support.v7.widget.RecyclerView
+              android:id="@+id/rv_financing_upload_door_plate"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="18dp"
+              android:paddingRight="18dp"
+              android:background="@color/white"
+              android:descendantFocusability="beforeDescendants" />
+          </RelativeLayout>
+        </LinearLayout>
+      </ScrollView>
+    </LinearLayout>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/btn_apply_commit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selector_button_straight"
+    android:gravity="center"
+    android:text="提交"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</RelativeLayout>

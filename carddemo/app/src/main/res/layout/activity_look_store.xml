@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/activity_look_store"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_blue"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/ll_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:src="@mipmap/icon_none1" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_gravity="center_horizontal"
+          android:text="暂无内容"
+          android:textColor="@color/app_blue"
+          android:textSize="20sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/rv_shop_select_lists"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/app_background" />
+
+  </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="90dp">
+
+      <ImageView
+        android:id="@+id/img"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerVertical="true"
+        android:padding="7dp"
+        android:background="@drawable/my_self_message"
+        android:contentDescription="@null"
+        android:src="@mipmap/laba" />
+
+      <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:layout_toRightOf="@id/img"
+        android:text="系统维护"
+        android:textColor="#232323"
+        android:textSize="14sp" />
+
+      <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_alignBottom="@id/tv_title"
+        android:layout_alignParentRight="true"
+        android:text="系统维护"
+        android:textColor="#232323"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img"
+        android:layout_toRightOf="@id/img"
+        android:paddingRight="16dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="2"
+        android:lineSpacingExtra="4dp"
+        android:text="温馨提示：您可以分别填写不同的类别信息来提升您的融资"
+        android:textColor="#585858"
+        android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/tv_red"
+      android:layout_width="10dp"
+      android:layout_height="10dp"
+      android:layout_marginTop="14dp"
+      android:layout_marginLeft="64dp"
+      android:background="@drawable/red_background_circle_style" />
+  </FrameLayout>
+
+  <FrameLayout style="@style/lines_dbdbdb" />
+
+</LinearLayout>

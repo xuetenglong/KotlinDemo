@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="58.5dp"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:orientation="horizontal">
+
+
+    <!-- 还款清算的  item -->
+
+    <TextView
+      android:id="@+id/tv_shouldReturnDate"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:singleLine="true"
+      android:text="TextView"
+      android:textColor="#959595" />
+
+    <TextView
+      android:id="@+id/tv_shouldReturnMoney"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:singleLine="true"
+      android:text="TextView"
+      android:textColor="#959595" />
+
+    <TextView
+      android:id="@+id/tv_receiveDate"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:singleLine="true"
+      android:text="TextView"
+      android:textColor="#959595" />
+
+    <TextView
+      android:id="@+id/tv_receiveMoney"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:singleLine="true"
+      android:text="TextView"
+      android:textColor="#959595" />
+  </LinearLayout>
+
+  <FrameLayout style="@style/lines_dbdbdb" />
+
+</LinearLayout>

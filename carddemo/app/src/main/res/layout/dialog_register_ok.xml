@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:layout_gravity="center"
+    android:padding="4dp"
+    android:minWidth="280dp"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/dialog_radius"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.5"
+        android:minHeight="40dp"
+        android:text="感谢您申请卡得万利的业务。24小时内会有客户经理联系您协助办理。请注意接听来自上海021的号码来电（法定节假日除外）"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e5e5e5" />
+
+      <Button
+        android:id="@+id/confirm_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/selector_button_rectangle"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

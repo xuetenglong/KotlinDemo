@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:background="@drawable/dialog_radius"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tv_tip_title"
+      android:textStyle="bold"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:gravity="center"
+      android:text="是否继续添加POS商编"
+      android:textColor="@color/lists_item_text_left"
+      android:textSize="14sp" />
+
+
+    <View style="@style/lines_dbdbdb" />
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/iv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@null"
+        android:text="不添加了"
+        android:textColor="@color/b9b9b9" />
+
+      <Button
+        android:id="@+id/btn_ok"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/selector_button_rectangle"
+        android:text="继续添加"
+        android:textColor="@color/white" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

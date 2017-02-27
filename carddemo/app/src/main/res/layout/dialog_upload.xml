@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/rl_mobile"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!--小图片圆角16  测量是32-->
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:background="@drawable/dialog_radius_upload" />
+    </LinearLayout>
+  </LinearLayout>
+
+
+  <TextView
+    android:id="@+id/tv_titile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="52dp"
+    android:layout_marginBottom="24dp"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:singleLine="true"
+    android:text="门店照片"
+    android:textColor="#000000"
+    android:textSize="30sp" />
+</RelativeLayout>

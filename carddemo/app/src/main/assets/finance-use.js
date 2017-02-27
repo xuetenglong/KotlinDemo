@@ -1,0 +1,358 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1)
+	var __weex_template__ = __webpack_require__(5)
+	var __weex_style__ = __webpack_require__(6)
+	var __weex_script__ = __webpack_require__(7)
+
+	__weex_define__('@weex-component/f5c81e7f476cfd8be74ab17833d9b260', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+	__weex_bootstrap__('@weex-component/f5c81e7f476cfd8be74ab17833d9b260',undefined,undefined)
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(2)
+	var __weex_style__ = __webpack_require__(3)
+	var __weex_script__ = __webpack_require__(4)
+
+	__weex_define__('@weex-component/more-item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "children": [
+	    {
+	      "type": "div",
+	      "classList": [
+	        "item"
+	      ],
+	      "children": [
+	        {
+	          "type": "div",
+	          "classList": [
+	            "item-content"
+	          ],
+	          "children": [
+	            {
+	              "type": "image",
+	              "classList": [
+	                "item-image"
+	              ],
+	              "shown": function () {return this.imageShown},
+	              "attr": {
+	                "src": function () {return this.itemImage}
+	              }
+	            },
+	            {
+	              "type": "text",
+	              "classList": [
+	                "item-text"
+	              ],
+	              "attr": {
+	                "value": function () {return this.itemText}
+	              }
+	            }
+	          ]
+	        },
+	        {
+	          "type": "image",
+	          "classList": [
+	            "item-more"
+	          ],
+	          "attr": {
+	            "src": "https://www.cvbaoli.com/app/Tpl/red/download/android/arrow-right.png"
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "backgroundColor": "#e8e8e8",
+	        "height": 1
+	      },
+	      "shown": function () {return this.lineShown}
+	    }
+	  ]
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "item": {
+	    "height": 100,
+	    "backgroundColor": "#FFFFFF",
+	    "flexDirection": "row",
+	    "alignItems": "center",
+	    "justifyContent": "space-between",
+	    "paddingLeft": 28,
+	    "paddingRight": 28
+	  },
+	  "item-content": {
+	    "flexDirection": "row"
+	  },
+	  "item-image": {
+	    "width": 40,
+	    "height": 40,
+	    "marginRight": 28
+	  },
+	  "item-text": {
+	    "fontSize": 28,
+	    "color": "#333333"
+	  },
+	  "item-more": {
+	    "width": 20,
+	    "height": 20
+	  }
+	}
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	module.exports = {
+	    data: function () {return {
+	        itemImage: '',
+
+	        imageShown: false,
+	        itemText: '',
+
+	        lineShown: true
+	    }}
+	};}
+	/* generated by weex-loader */
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "style": {
+	    "backgroundColor": "#f4f4f4"
+	  },
+	  "attr": {
+	    "static": ""
+	  },
+	  "children": [
+	    {
+	      "type": "div",
+	      "classList": [
+	        "title"
+	      ],
+	      "children": [
+	        {
+	          "type": "image",
+	          "classList": [
+	            "titleBack"
+	          ],
+	          "attr": {
+	            "src": "https://www.cvbaoli.com/app/Tpl/red/download/android/title-back.png"
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "classList": [
+	            "titleText"
+	          ],
+	          "attr": {
+	            "value": "融资用途"
+	          }
+	        },
+	        {
+	          "type": "text"
+	        }
+	      ]
+	    },
+	    {
+	      "type": "list",
+	      "classList": [
+	        "lists"
+	      ],
+	      "children": [
+	        {
+	          "type": "cell",
+	          "append": "tree",
+	          "events": {
+	            "click": "clickItem"
+	          },
+	          "attr": {
+	            "rownumber": function () {return this.id},
+	            "scope": function () {return this.scopeValue}
+	          },
+	          "repeat": function () {return this.uses},
+	          "children": [
+	            {
+	              "type": "more-item",
+	              "attr": {
+	                "itemText": function () {return this.name}
+	              }
+	            }
+	          ]
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": {
+	    "height": 100,
+	    "backgroundColor": "#FFFFFF",
+	    "paddingLeft": 28,
+	    "paddingRight": 28,
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "titleBack": {
+	    "width": 20,
+	    "height": 40
+	  },
+	  "titleText": {
+	    "fontSize": 44,
+	    "color": "#343434"
+	  },
+	  "lists": {
+	    "marginTop": 20
+	  }
+	}
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	module.exports = {
+	    data: function () {return {
+	        uses: [{
+	            id: 0,
+	            scopeValue: 0,
+	            name: '开立分店'
+	        }, {
+	            id: 1,
+	            scopeValue: 1,
+	            name: '店铺装修'
+	        }, {
+	            id: 2,
+	            scopeValue: 2,
+	            name: '添置设备'
+	        }, {
+	            id: 3,
+	            scopeValue: 3,
+	            name: '增加库存'
+	        }, {
+	            id: 4,
+	            scopeValue: 4,
+	            name: '工资账单'
+	        }, {
+	            id: 5,
+	            scopeValue: 5,
+	            name: '广告宣传'
+	        }, {
+	            id: 6,
+	            scopeValue: 6,
+	            name: '个人消费'
+	        }, {
+	            id: 7,
+	            scopeValue: 7,
+	            name: '资金周转'
+	        }, {
+	            id: 8,
+	            scopeValue: 8,
+	            name: '其它'
+	        }]
+	    }},
+	    methods: {
+	        clickItem: function clickItem(e) {
+	            __weex_require__('@weex-module/weexModule').selectUse(this.uses[e.target.attr.rownumber].name + "");
+	        }
+	    }
+	};}
+	/* generated by weex-loader */
+
+
+/***/ }
+/******/ ]);

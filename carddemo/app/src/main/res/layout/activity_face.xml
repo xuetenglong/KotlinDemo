@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_alignParentTop="true"
+  android:background="@android:color/white"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <include layout="@layout/title_bar_white" />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="取消手机的静音模式，并将音量调整最大"
+    android:textColor="@color/text_small_color"
+    android:textSize="14sp" />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="请增大手机音量，根据语音提示操作并注意以下细节"
+    android:textColor="@color/text_small_color"
+    android:textSize="14sp" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/app_background"
+    android:scrollbars="none">
+
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:contentDescription="@string/app_name"
+      android:src="@mipmap/icon_face" />
+  </ScrollView>
+
+  <Button
+    android:id="@+id/btn_face_commit"
+    style="@style/lists_commit_button"
+    android:text="准备好了，开始验证" />
+</LinearLayout>

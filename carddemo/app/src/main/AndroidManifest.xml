@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.cardvlaue.sys">
+
+  <!-- 小企额所需权限 -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <!-- 服务里面弹出dialog需要的权限 -->
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+  <!-- 同盾所需权限 -->
+  <!-- 必选权限 -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.BATTERY_STATS" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <!-- 可选权限，不声明此部分权限将放弃部分设备信息的采集，对数据分析及设备指纹的精准度有一定影响 -->
+  <uses-permission android:name="android.permission.GET_TASKS" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+
+  <!-- 百度定位所需权限 -->
+  <!-- 这个权限用于进行网络定位 -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <!-- 这个权限用于访问GPS定位 -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <!-- 用于读取手机当前的状态 -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- 访问网络，网络定位需要上网 -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- SD卡读取权限，用户写入离线定位数据 -->
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+  <!-- TalkingData -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.GET_TASKS" />
+
+  <!-- 卡拉人脸识别 -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    <!-- <group gid="sdcard_rw" />
+     <group gid="media_rw"/>-->
+  </uses-permission>
+
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+
+  <!-- 卡拉人脸识别 -->
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.autofocus" />
+
+  <!-- Bugly -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.READ_LOGS" />
+
+  <application
+    android:allowBackup="false"
+    android:icon="@mipmap/ic_logo"
+    android:label="@string/app_name"
+    android:largeHeap="true"
+    android:name=".CVApplication"
+    android:theme="@style/AppTheme"
+    tools:replace="android:allowBackup">
+
+    <!-- 同盾 -->
+    <meta-data
+      android:name="PARTNER_CODE"
+      android:value="cardvalue" />
+
+    <!-- 百度定位 -->
+    <meta-data
+      android:name="com.baidu.lbsapi.API_KEY"
+      android:value="MWjvAn977shIecebbTbjgbwG" />
+
+    <!-- TalkingData  行为数据分析 -->
+    <!--
+   "9E113EBD411444673619DBCBA6EBB118"  测试 ，行为数据分析
+   "E9F7364EAE61FA8CDE90B4F563C80D70"   正式
+   481E7AE83BFA45C1CF31BCECF830573C     "马甲包"
+        -->
+    <meta-data
+      android:name="TD_APP_ID"
+      android:value="E9F7364EAE61FA8CDE90B4F563C80D70" />
+    <meta-data
+      android:name="TD_CHANNEL_ID"
+      android:value="android-guanwang" />
+
+    <!-- 小企额 -->
+    <activity
+      android:name=".splash.SplashActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/SplashTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <!--  android:launchMode="singleTask"-->
+    <activity
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:name=".main.MainActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:launchMode="singleTask"
+      android:name=".login.LoginActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+    <activity
+      android:name=".forgotpwd.ForgotPwdActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".registerverify.RegisterVerifyActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <!-- 融资意向 -->
+    <activity
+      android:name=".financeintention.FinanceIntentionActivity"
+      android:screenOrientation="portrait"
+      android:windowSoftInputMode="adjustPan"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".shopselect.ShopSelectActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".shopadd.ShopAddActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".searchselect.SearchSelectActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".shopadd.AddressSearchActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".shopadd.ContractSelectActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <!-- 完善信息 -->
+    <activity
+      android:name=".userinfo.UserInfoActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <!-- 算算融资额度 -->
+    <activity
+      android:name=".financeway.FinanceWayActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".financeintention.FinanceUseActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".posmanagement.PosManagementActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".posadd.PosAddActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".about.AboutActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme">
+
+      <!-- Deep Links -->
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+          android:host="www.cvbaoli.com"
+          android:path="/index.php?ctl=download"
+          android:scheme="http" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".webshow.WebShowActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".userdatails.UserDetailsActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 百度定位的配置 -->
+    <service
+      android:enabled="true"
+      android:name="com.baidu.location.f"
+      android:process=":remote" />
+
+    <!-- 极光推送的配置 -->
+    <!-- User defined. 用户自定义的广播接收器 -->
+    <receiver
+      android:enabled="true"
+      android:name=".my.MyJpushReceiver">
+      <intent-filter>
+
+        <!-- Required 用户注册SDK的intent -->
+        <action android:name="cn.jpush.android.intent.REGISTRATION" />
+        <!-- Required 用户接收SDK消息的intent -->
+        <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+        <!-- Required 用户接收SDK通知栏信息的intent -->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+        <!-- Required 用户打开自定义通知栏的intent -->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+        <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+        <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+        <category android:name="${applicationId}" />
+      </intent-filter>
+    </receiver>
+
+    <!--上传照片-->
+    <activity
+      android:name=".uploadphoto.UploadPhotoActivityNew"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 对账单 -->
+    <activity
+      android:name=".bill.BillActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 保理通知书 type 3 -->
+    <activity
+      android:name=".baolinotice.BaoliNoticeActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- >融资方案确认  type 2 -->
+    <activity
+      android:name=".financeconfirm.FinanceConfirmActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 申请信息 信息详情页面 -->
+    <activity
+      android:name=".applyinfo.ApplyInfoActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 征信报告验证的页面 -->
+    <activity
+      android:name=".creditreport.CreditReportActivity"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 邀请人  分享的 -->
+    <activity
+      android:name=".invitat.InvitatActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 验证银行卡  对公 -->
+    <activity
+      android:name=".cardverify.CardPublicActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 验证银行卡  对私 -->
+    <activity
+      android:name=".cardverify.CardPrivateActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 手机验证（聚信力） -->
+    <activity
+      android:name=".mobileverify.MobileVerifyActivity"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 计算额度 -->
+    <activity
+      android:name=".amount.CountAmountActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 申请已提交 -->
+    <activity
+      android:name=".applyinfo.AppSubmitActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 上传图片 -->
+    <activity
+      android:name=".uploadphoto.UploadPhotoActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <provider
+      android:authorities="com.cardvlaue.sys.android.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true"
+      android:name="android.support.v4.content.FileProvider">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+    </provider>
+
+    <!-- 额度倒计时 -->
+    <activity
+      android:name=".amount.AmountCountdownActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 我的二维码 -->
+    <activity
+      android:name=".qrcode.QRCodeActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 获取银行列表 -->
+    <activity
+      android:name=".confirm.ConfirmListActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 红包  现金券  和优惠券 -->
+    <activity
+      android:name=".redenvelope.CouponCashActivity"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 修改密码 -->
+    <activity
+      android:name=".changepassword.ChangePasswordActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 在线客服 -->
+    <activity android:name=".customerservice.CustomerServiceActivity" />
+
+    <!-- 优惠券  AppTheme.NoActionBar" -->
+    <activity
+      android:name=".redenvelope.MoneyActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 友盟配置 -->
+    <activity
+      android:configChanges="keyboardHidden|orientation|screenSize"
+      android:exported="false"
+      android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+      android:windowSoftInputMode="adjustResize" />
+
+    <!--
+     <service
+         android:name="com.sina.weibo.sdk.net.DownloadService"
+         android:exported="false" />
+
+     &lt;!&ndash; 微信 &ndash;&gt;
+     <activity
+         android:name="com.umeng.soexample.wxapi.WXEntryActivity"
+         android:configChanges="keyboardHidden|orientation|screenSize"
+         android:exported="true"
+         android:screenOrientation="portrait"
+         android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+    <activity
+      android:excludeFromRecents="true"
+      android:name="com.umeng.socialize.editorpage.ShareActivity"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <meta-data
+      android:name="UMENG_APPKEY"
+      android:value="55d45a4867e58e7f3c00198c"> <!-- 替换为自己的友盟key -->
+    </meta-data>
+
+    <activity
+      android:launchMode="singleTask"
+      android:name="com.tencent.tauth.AuthActivity"
+      android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="1104815116" />
+        <!-- TODO 修改为自己的key -->
+      </intent-filter>
+    </activity>
+
+    <!-- 意见反馈 -->
+    <activity
+      android:name=".feedback.FeedBackOneActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name="com.tencent.connect.common.AssistActivity"
+      android:screenOrientation="portrait"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+    <!-- 消息 -->
+    <activity
+      android:name=".message.MessageActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 消息详情 -->
+    <activity
+      android:name=".message.MessageDetailActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 查看店铺列表 -->
+    <activity
+      android:name=".lookstore.LookStoreActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 图片放大查看 -->
+    <activity
+      android:name=".UploadImagePager.ImagePagerActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/ImageScale" />
+
+    <!-- 征信的引导页 -->
+    <activity
+      android:name=".creditreport.CreditReportGuideActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+
+    <!-- 支付宝 -->
+    <activity
+      android:name=".alipayverify.AlipayVerifyActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+
+    <!-- 刷脸识别 -->
+    <activity
+      android:name=".face.FaceActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme"
+      android:windowSoftInputMode="adjustPan" />
+    <activity
+      android:name=".bill.BillTotalActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".bill.BillDetailsActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+    <activity
+      android:name=".newalipayverify.NewAlipayVerifyActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/TransparentStatusBarTheme" />
+  </application>
+</manifest>

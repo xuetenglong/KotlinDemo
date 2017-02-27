@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/ll_industry_select_group"
+  android:layout_width="match_parent"
+  android:layout_height="80.5dp"
+  android:background="@color/white"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+
+    <RelativeLayout
+      android:id="@+id/rl_left"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true">
+
+      <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周四"
+        android:textColor="#adadad"
+        android:textSize="15sp" />
+
+      <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_day"
+        android:paddingTop="6dp"
+        android:text="11-27"
+        android:textColor="#adadad"
+        android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <ImageView
+      android:id="@+id/iv_img"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toRightOf="@+id/rl_left"
+      android:paddingLeft="24dp"
+      android:src="@mipmap/ic_add_file" />
+
+
+    <RelativeLayout
+      android:id="@+id/rl_center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toRightOf="@+id/iv_img"
+      android:paddingLeft="24dp">
+
+      <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1000"
+        android:textColor="#323232"
+        android:textSize="16sp" />
+
+      <TextView
+        android:id="@+id/tv_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_money"
+        android:paddingTop="6dp"
+        android:text="POS还款代扣"
+        android:textColor="#666666"
+        android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:contentDescription="@string/app_name"
+      android:drawablePadding="4dp"
+      android:drawableRight="@mipmap/icon_more"
+      android:scaleType="center"
+      android:text="未逾期"
+      android:textColor="@color/app_blue"
+      android:textSize="13sp" />
+
+  </RelativeLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:layout_weight="1"
+    android:background="#DBDBDB" />
+</LinearLayout>

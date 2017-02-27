@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent"
+  android:gravity="center"
+  android:orientation="vertical">
+
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/dialog_radius"
+    android:minWidth="280dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="92dp"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:orientation="horizontal">
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_sms_code_img"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        fresco:actualImageScaleType="fitXY" />
+
+      <EditText
+        android:id="@+id/et_sms_code_input"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:padding="4dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="@string/forgot_pwd_sms_hint"
+        android:maxLength="4"
+        android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+        android:textSize="14sp" />
+
+
+      <!--android:background="@drawable/shape_register_input_box"   drawable/selector_register_button_left-->
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0.5dip"
+      android:background="#e5e5e5" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btn_sms_code_cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@null"
+        android:text="@string/cancel"
+        android:textColor="#6d6d6d" />
+
+      <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#D1D1D1"
+        android:visibility="gone" />
+
+      <Button
+        android:id="@+id/btn_sms_code_ok"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/selector_button_rectangle"
+        android:text="@string/ok"
+        android:textColor="@color/white" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_blue"
+  android:fitsSystemWindows="true">
+
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+      android:id="@+id/top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <include layout="@layout/title_default" />
+
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:paddingLeft="14dp"
+        android:background="@color/app_blue"
+        android:gravity="center_vertical"
+        android:text="邀请获取优惠券(元)"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="34dp"
+        android:paddingBottom="19dp"
+        android:paddingLeft="14dp"
+        android:background="@color/app_blue">
+
+        <TextView
+          android:id="@+id/yuan"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:text="0.00"
+          android:textColor="@color/white"
+          android:textSize="39sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:layout_toRightOf="@+id/yuan"
+          android:gravity="bottom"
+          android:text="元"
+          android:textColor="@color/white"
+          android:textSize="16sp" />
+      </RelativeLayout>
+
+      <TextView
+        android:id="@+id/inviteCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="28dp"
+        android:paddingLeft="14dp"
+        android:background="@color/app_blue"
+        android:text="成功邀请：0人"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+      <LinearLayout
+        android:id="@+id/ly_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ly_bottom"
+        android:layout_below="@+id/top"
+        android:orientation="vertical">
+
+        <ListView
+          android:id="@+id/listview"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginBottom="59dp"
+          android:background="@color/white"
+          android:visibility="gone" />
+
+        <RelativeLayout
+          android:id="@+id/ry_person"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:visibility="visible">
+
+          <RelativeLayout
+            android:id="@+id/ry_no"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <FrameLayout
+              style="@style/lines_dbdbdb"
+              android:layout_width="match_parent"
+              android:layout_centerVertical="true"
+              android:layout_toLeftOf="@+id/tv_text" />
+
+            <TextView
+              android:id="@+id/tv_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="14dp"
+              android:layout_centerInParent="true"
+              android:text="暂无邀请记录"
+              android:textColor="#979797" />
+
+            <FrameLayout
+              style="@style/lines_dbdbdb"
+              android:layout_width="match_parent"
+              android:layout_centerVertical="true"
+              android:layout_toRightOf="@+id/tv_text" />
+          </RelativeLayout>
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="60dp"
+            android:layout_below="@+id/ry_no">
+
+            <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_centerInParent="true"
+              android:padding="20dp"
+              android:contentDescription="@null"
+              android:src="@mipmap/redpork" />
+          </RelativeLayout>
+        </RelativeLayout>
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/ly_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="vertical">
+
+      <View style="@style/lines_dbdbdb" />
+
+      <Button
+        android:id="@+id/btn_shread"
+        style="@style/white_style18"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/shape_home_apply_button"
+        android:text="邀请好友赢大奖" />
+    </LinearLayout>
+  </RelativeLayout>
+</RelativeLayout>

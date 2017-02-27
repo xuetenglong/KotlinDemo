@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:theme="@style/AppTheme.AppBarOverlay"
+  app:elevation="0dp">
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/title_default_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:background="@color/app_blue"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginEnd="@dimen/activity_horizontal_margin"
+      android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+
+      <TextView
+        android:id="@+id/title_default_left"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/icon_message"
+        android:maxLength="4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size_other" />
+
+      <TextView
+        android:id="@+id/tv_reds"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/red_background_circle_style"
+        android:visibility="gone" />
+
+
+      <TextView
+        android:id="@+id/title_default_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size_middle" />
+
+      <TextView
+        android:id="@+id/title_default_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/title_default_middle"
+        android:layout_toRightOf="@id/title_default_middle"
+        android:gravity="end"
+        android:maxLength="4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size_other" />
+    </RelativeLayout>
+  </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

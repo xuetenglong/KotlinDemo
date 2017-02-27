@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_blue"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+      <include layout="@layout/title_default" />
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.cardvlaue.sys.util.EditData
+        android:id="@+id/ed_feekback"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="14dp"
+        android:padding="18dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:hint="你的声音我们倾听"
+        android:textColor="@android:color/black"
+        android:textColorHint="#c8c8ce"
+        android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+        android:textSize="14sp"
+        app:inputLabel="反馈内容"
+        app:inputName="content"
+        app:pageName="意见反馈" />
+
+      <com.cardvlaue.sys.util.EditData
+        android:id="@+id/ed_feedback_contract"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@id/ed_feekback"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:background="#ffffff"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="请留下您的联系方式：手机号码"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textColorHint="#c8c8ce"
+        android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+        android:textSize="12sp"
+        app:inputLabel="联系方式"
+        app:inputName="connection"
+        app:pageName="意见反馈" />
+
+      <com.cardvlaue.sys.util.MyGridViewUtil
+        android:id="@+id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_margin="14dp"
+        android:layout_below="@id/ed_feedback_contract"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="5"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+    </RelativeLayout>
+
+    <Button
+      android:id="@+id/submit"
+      style="?android:attr/borderlessButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="44dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_gravity="center"
+      android:background="@drawable/selector_disabled_button"
+      android:text="@string/user_info_commit"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+  </LinearLayout>
+</LinearLayout>

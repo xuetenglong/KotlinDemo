@@ -1,0 +1,504 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1)
+	var __weex_template__ = __webpack_require__(5)
+	var __weex_style__ = __webpack_require__(6)
+	var __weex_script__ = __webpack_require__(7)
+
+	__weex_define__('@weex-component/cd7160b16f9e528c3fcbd506ae010d25', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+	__weex_bootstrap__('@weex-component/cd7160b16f9e528c3fcbd506ae010d25',undefined,undefined)
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __weex_template__ = __webpack_require__(2)
+	var __weex_style__ = __webpack_require__(3)
+	var __weex_script__ = __webpack_require__(4)
+
+	__weex_define__('@weex-component/more-item', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+
+	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
+	    if (__weex_exports__.__esModule && __weex_exports__.default) {
+	      __weex_module__.exports = __weex_exports__.default
+	    }
+
+	    __weex_module__.exports.template = __weex_template__
+
+	    __weex_module__.exports.style = __weex_style__
+
+	})
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "children": [
+	    {
+	      "type": "div",
+	      "classList": [
+	        "item"
+	      ],
+	      "children": [
+	        {
+	          "type": "div",
+	          "classList": [
+	            "item-content"
+	          ],
+	          "children": [
+	            {
+	              "type": "image",
+	              "classList": [
+	                "item-image"
+	              ],
+	              "shown": function () {return this.imageShown},
+	              "attr": {
+	                "src": function () {return this.itemImage}
+	              }
+	            },
+	            {
+	              "type": "text",
+	              "classList": [
+	                "item-text"
+	              ],
+	              "attr": {
+	                "value": function () {return this.itemText}
+	              }
+	            }
+	          ]
+	        },
+	        {
+	          "type": "image",
+	          "classList": [
+	            "item-more"
+	          ],
+	          "attr": {
+	            "src": "https://www.cvbaoli.com/app/Tpl/red/download/android/arrow-right.png"
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "backgroundColor": "#e8e8e8",
+	        "height": 1
+	      },
+	      "shown": function () {return this.lineShown}
+	    }
+	  ]
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "item": {
+	    "height": 100,
+	    "backgroundColor": "#FFFFFF",
+	    "flexDirection": "row",
+	    "alignItems": "center",
+	    "justifyContent": "space-between",
+	    "paddingLeft": 28,
+	    "paddingRight": 28
+	  },
+	  "item-content": {
+	    "flexDirection": "row"
+	  },
+	  "item-image": {
+	    "width": 40,
+	    "height": 40,
+	    "marginRight": 28
+	  },
+	  "item-text": {
+	    "fontSize": 28,
+	    "color": "#333333"
+	  },
+	  "item-more": {
+	    "width": 20,
+	    "height": 20
+	  }
+	}
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	module.exports = {
+	    data: function () {return {
+	        itemImage: '',
+
+	        imageShown: false,
+	        itemText: '',
+
+	        lineShown: true
+	    }}
+	};}
+	/* generated by weex-loader */
+
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "type": "div",
+	  "style": {
+	    "backgroundColor": "#f4f4f4"
+	  },
+	  "attr": {
+	    "static": ""
+	  },
+	  "children": [
+	    {
+	      "type": "div",
+	      "style": {
+	        "backgroundColor": "#359df5",
+	        "height": 60
+	      }
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "title"
+	      ],
+	      "children": [
+	        {
+	          "type": "text",
+	          "classList": [
+	            "titleText"
+	          ],
+	          "attr": {
+	            "value": "更多"
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "classList": [
+	        "service"
+	      ],
+	      "events": {
+	        "click": "clickServicePhone"
+	      },
+	      "children": [
+	        {
+	          "type": "image",
+	          "classList": [
+	            "serviceImage"
+	          ],
+	          "attr": {
+	            "src": function () {return this.service.image}
+	          }
+	        },
+	        {
+	          "type": "div",
+	          "children": [
+	            {
+	              "type": "text",
+	              "classList": [
+	                "servicePhone"
+	              ],
+	              "attr": {
+	                "value": "4008-803-803"
+	              }
+	            },
+	            {
+	              "type": "text",
+	              "classList": [
+	                "serviceTime"
+	              ],
+	              "attr": {
+	                "value": "服务时间周一至周五：9:00-18:00"
+	              }
+	            }
+	          ]
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "height": 20
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickStrategy"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.strategy.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.strategy.text},
+	        "lineShown": function () {return this.lineShown}
+	      }
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "height": 20
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickIntroduction"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.introduction.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.introduction.text}
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickHonor"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.honor.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.honor.text}
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickContact"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.contact.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.contact.text}
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickAbout"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.about.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.about.text},
+	        "lineShown": function () {return this.lineShown}
+	      }
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "height": 20
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickFeedback"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.feedback.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.feedback.text}
+	      }
+	    },
+	    {
+	      "type": "more-item",
+	      "events": {
+	        "click": "clickServiceOnline"
+	      },
+	      "attr": {
+	        "itemImage": function () {return this.serviceOnline.image},
+	        "imageShown": function () {return this.imageShown},
+	        "itemText": function () {return this.serviceOnline.text},
+	        "lineShown": function () {return this.lineShown}
+	      }
+	    }
+	  ]
+	}
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": {
+	    "height": 100,
+	    "backgroundColor": "#359df5",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "titleText": {
+	    "fontSize": 44,
+	    "color": "#FFFFFF"
+	  },
+	  "service": {
+	    "height": 180,
+	    "backgroundColor": "#FFFFFF",
+	    "flexDirection": "row",
+	    "alignItems": "center"
+	  },
+	  "serviceImage": {
+	    "width": 100,
+	    "height": 100,
+	    "marginLeft": 80,
+	    "marginRight": 30
+	  },
+	  "servicePhone": {
+	    "fontSize": 36,
+	    "color": "#000000"
+	  },
+	  "serviceTime": {
+	    "fontSize": 26,
+	    "color": "#606060"
+	  }
+	}
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = function(module, exports, __weex_require__){'use strict';
+
+	module.exports = {
+	    data: function () {return {
+	        service: {
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/service.png'
+	        },
+	        strategy: {
+	            text: '融资攻略',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/gonglue.png',
+	            url: 'https://www.cvbaoli.com/testpenguin/new/m/more/question'
+	        },
+	        introduction: {
+	            text: '公司简介',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/pruoduce.png',
+	            url: 'https://www.cvbaoli.com/testpenguin/new/m/more/aboutUs?isApp=1'
+	        },
+	        honor: {
+	            text: '荣誉资质',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/honor.png',
+	            url: 'https://www.cvbaoli.com/testpenguin/new/m/more/honor?isApp=1'
+	        },
+	        contact: {
+	            text: '联系方式',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/contact.png',
+	            url: 'https://www.cvbaoli.com/testpenguin/new/m/more/contactUs?isApp=1'
+	        },
+	        about: {
+	            text: '关于我们',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/about.png'
+	        },
+	        feedback: {
+	            text: '意见反馈',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/opinion.png'
+	        },
+	        serviceOnline: {
+	            text: '在线客服',
+	            image: 'https://www.cvbaoli.com/app/Tpl/red/download/android/kefu.png'
+	        },
+	        imageShown: true,
+	        lineShown: false
+	    }},
+	    methods: {
+	        clickServicePhone: function clickServicePhone() {
+	            __weex_require__('@weex-module/weexModule').callService('拨打客服电话', 'tel:4008-803-803', '呼叫', '取消');
+	        },
+
+	        clickStrategy: function clickStrategy() {
+	            __weex_require__('@weex-module/weexModule').openNativeWeb(this.strategy.text, this.strategy.url);
+	        },
+
+	        clickIntroduction: function clickIntroduction() {
+	            __weex_require__('@weex-module/weexModule').openNativeWeb(this.introduction.text, this.introduction.url);
+	        },
+
+	        clickHonor: function clickHonor() {
+	            __weex_require__('@weex-module/weexModule').openNativeWeb(this.honor.text, this.honor.url);
+	        },
+
+	        clickContact: function clickContact() {
+	            __weex_require__('@weex-module/weexModule').openNativeWeb(this.contact.text, this.contact.url);
+	        },
+
+	        clickAbout: function clickAbout() {
+	            __weex_require__('@weex-module/weexModule').startAbout();
+	        },
+
+	        clickFeedback: function clickFeedback() {
+	            __weex_require__('@weex-module/weexModule').startFeedback();
+	        },
+
+	        clickServiceOnline: function clickServiceOnline() {
+	            __weex_require__('@weex-module/weexModule').startServiceOnline();
+	        }
+	    }
+	};}
+	/* generated by weex-loader */
+
+
+/***/ }
+/******/ ]);

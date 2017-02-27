@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/transparent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:background="@drawable/dialog_radius"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="28dp">
+
+      <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:src="@mipmap/ic_cancel_black" />
+    </RelativeLayout>
+
+
+    <TextView
+      android:id="@+id/tv_titile"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="18dp"
+      android:gravity="center_horizontal"
+      android:text="门牌照-补件原因"
+      android:textColor="#000000"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/tv_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="18dp"
+      android:paddingLeft="18dp"
+      android:paddingRight="18dp"
+      android:lineSpacingMultiplier="1.5"
+      android:text="您上传的照片不够清晰，请将店面与门牌文字一起拍进照片！"
+      android:textColor="@color/c7c7c"
+      android:textSize="13sp" />
+  </LinearLayout>
+</LinearLayout>

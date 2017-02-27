@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="13dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tv_upload_item_title_text"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:layout_marginBottom="6dp"
+      android:layout_gravity="center_horizontal"
+      android:ellipsize="end"
+      android:gravity="bottom"
+      android:lineSpacingExtra="4dp"
+      android:maxLines="3"
+      android:text="门牌照清晰照"
+      android:textColor="@color/text_vice"
+      android:textSize="12sp" />
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <!--   <com.facebook.drawee.view.SimpleDraweeView
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_margin="1dp"
+             android:layout_weight="1"
+             android:minHeight="82dp"
+             fresco:actualImageScaleType="fitXY" />-->
+
+      <!--android:layout_height="0dp"
+                   android:layout_margin="1dp"
+                   android:layout_weight="1"
+                   android:minHeight="90dp"-->
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_financing_upload_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/selector_upload"
+        android:src="@mipmap/icon_upload"
+        fresco:actualImageScaleType="fitXY" />
+
+      <ImageView
+        android:id="@+id/iv_add_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_upload"
+        android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+      android:id="@+id/tv_financing_upload_item_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="4dp"
+      android:layout_gravity="center_horizontal"
+      android:text="@string/financing_upload_door_example_img"
+      android:textColor="@color/red"
+      android:visibility="gone" />
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/iv_financing_upload_item_dialog"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginTop="45dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="-6dp"
+    android:contentDescription="@string/app_name"
+    android:scaleType="fitXY"
+    android:src="@mipmap/help"
+    android:visibility="visible" />
+
+  <TextView
+    android:id="@+id/iv_left_upload_item_dialog"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginTop="45dp"
+    android:layout_marginRight="6dp"
+    android:layout_gravity="end"
+    android:padding="6dp"
+    android:background="@drawable/dialog_over_app_blue"
+    android:contentDescription="@string/app_name"
+    android:gravity="center"
+    android:scaleType="fitXY"
+    android:text="0"
+    android:textColor="@color/white"
+    android:textSize="10sp"
+    android:visibility="visible" />
+</FrameLayout>

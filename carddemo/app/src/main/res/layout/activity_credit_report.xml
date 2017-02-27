@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/white"
+  android:fitsSystemWindows="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f4f4f4"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_default" />
+
+    <com.cardvlaue.sys.my.IosScrollViewLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/shape_my_bg_credit"
+      android:fadingEdge="none"
+      android:overScrollMode="never">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="165dp"
+          android:background="@color/white">
+
+          <ImageView
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_credit" />
+        </RelativeLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@color/f4f4f4" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp"
+          android:paddingRight="12dp"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/username" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_credit_reports_account"
+              style="@style/public_text_right"
+              android:hint="@string/username_hint"
+              android:singleLine="true"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              app:inputLabel="征信中心登录名"
+              app:inputName="username"
+              app:pageName="征信授权" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/password" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_credit_reports_pwd"
+              style="@style/public_text_right"
+              android:hint="@string/password_hint"
+              android:inputType="textPassword"
+              android:maxLines="1"
+              app:inputLabel="征信中心密码"
+              app:inputName="password"
+              app:pageName="征信授权" />
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="图形码" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_credit_reports_img_code"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="5"
+              android:layout_marginLeft="18dp"
+              android:background="@null"
+              android:gravity="center_vertical"
+              android:hint="@string/img_code"
+              android:singleLine="true"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColorHint="@color/b9b9b9"
+              android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+              android:textSize="14sp"
+              app:inputLabel="图片验证码"
+              app:inputName="verityCode"
+              app:pageName="征信授权" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+              android:id="@+id/sdv_credit_reports_img"
+              android:layout_width="86dp"
+              android:layout_height="40dp"
+              android:layout_marginLeft="8dp"
+              android:layout_marginRight="8dp"
+              android:layout_gravity="center_vertical"
+              android:contentDescription="@string/credit_reports_name"
+              fresco:actualImageScaleType="fitXY" />
+
+          </LinearLayout>
+
+          <FrameLayout style="@style/lines_dbdbdb" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <TextView
+              style="@style/public_text"
+              android:text="@string/code" />
+
+            <com.cardvlaue.sys.util.EditData
+              android:id="@+id/et_credit_reports_id_code"
+              style="@style/public_text_right"
+              android:hint="@string/check_code_hint"
+              android:singleLine="true"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              app:inputLabel="身份验证码"
+              app:inputName="tradeCode"
+              app:pageName="征信授权" />
+          </LinearLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="12dp">
+
+          <TextView
+            android:id="@+id/tv_credit_reports_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_agree"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="@string/agree_authoriza"
+            android:textColor="@color/app_blue"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/tv_credit_reports_how"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/credit_reports_credit_how_why"
+            android:textColor="@color/ff9000" />
+
+        </RelativeLayout>
+      </LinearLayout>
+    </com.cardvlaue.sys.my.IosScrollViewLayout>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/btn_credit_reports_commit"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/selector_button_straight"
+    android:gravity="center"
+    android:text="提交"
+    android:textColor="@color/white"
+    android:textSize="18sp" />
+</RelativeLayout>

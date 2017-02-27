@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/transparent">
+
+  <!-- <android.support.v7.widget.CardView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       card_view:cardBackgroundColor="@color/white"
+       card_view:cardCornerRadius="8dp"
+       card_view:cardElevation="4dp">-->
+
+  <RelativeLayout
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_centerInParent="true">
+
+    <View
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/dialog_bg" />
+
+    <RelativeLayout
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:layout_centerInParent="true"
+      android:background="@drawable/dialog_radius">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="22dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+          android:id="@+id/pb_content_loading_anim"
+          style="?android:attr/progressBarStyle"
+          android:layout_width="41dp"
+          android:layout_height="41dp"
+          android:indeterminateDrawable="@drawable/rotate_content_loading_bar"
+          android:indeterminateDuration="1000" />
+
+        <TextView
+          android:id="@+id/tv_content_loading_message"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="@string/app_name"
+          android:textColor="#595959"
+          android:textSize="14sp" />
+      </LinearLayout>
+    </RelativeLayout>
+  </RelativeLayout>
+  <!-- </android.support.v7.widget.CardView>-->
+</RelativeLayout>

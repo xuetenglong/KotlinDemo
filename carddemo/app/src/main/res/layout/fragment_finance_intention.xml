@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/app_background"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  android:orientation="vertical"
+  tools:context=".financeintention.FinanceIntentionActivity">
+
+  <include layout="@layout/title_bar_white" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/ll_finance_intention_shop"
+        style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:text="@string/finance_shops" />
+
+        <View
+          android:id="@+id/view2"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1" />
+
+        <TextView
+          android:id="@+id/tv_finance_intent_shop"
+          style="@style/lists_item_text"
+          android:layout_height="match_parent"
+          android:drawableEnd="@mipmap/icon_more"
+          android:drawablePadding="4dp"
+          android:drawableRight="@mipmap/icon_more"
+          android:gravity="center_vertical"
+          android:text="@string/finance_select"
+          android:textColor="@color/app_blue" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#E5E5E5" />
+
+      <LinearLayout
+        android:id="@+id/ll_finance_intention_use"
+        style="@style/lists_item_container">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:text="@string/finance_use" />
+
+        <View
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1" />
+
+        <TextView
+          android:id="@+id/tv_finance_intent_use"
+          style="@style/lists_item_text"
+          android:layout_height="match_parent"
+          android:drawableEnd="@mipmap/icon_more"
+          android:drawablePadding="4dp"
+          android:drawableRight="@mipmap/icon_more"
+          android:gravity="center_vertical"
+          android:text="@string/finance_select"
+          android:textColor="@color/app_blue" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+          style="@style/lists_item_text"
+          android:text="@string/finance_amount" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="10,000起，10,000的倍数递增，最多可以3,000,000元"
+          android:textColor="#909090"
+          android:textSize="12sp" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="8dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <com.cardvlaue.sys.financeintention.DeleteView
+            android:id="@+id/ib_finance_intention_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+          <com.cardvlaue.sys.util.EditData
+            android:id="@+id/et_finance_intention_amount_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="100000"
+            android:textAppearance="@style/TextAppearance.FontPath"
+            android:textColor="@color/app_blue"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_login"
+            android:textSize="25sp"
+            app:inputLabel="融资意向金额"
+            app:inputName="password"
+            app:pageName="融资意向" />
+
+          <com.cardvlaue.sys.financeintention.AddView
+            android:id="@+id/ib_finance_intention_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:layout_marginBottom="4dp"
+          android:background="#E5E5E5" />
+      </LinearLayout>
+
+      <LinearLayout
+        style="@style/lists_item_container"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+
+          <TextView
+            style="@style/lists_item_text"
+            android:text="@string/finance_deadline" />
+
+          <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+          <TextView
+            android:id="@+id/tv_finance_intention_tariff_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_finance_intent_tariff"
+            android:drawablePadding="5dp"
+            android:drawableStart="@mipmap/icon_finance_intent_tariff"
+            android:text="十二个月 月费率1.50%-1.55%"
+            android:textColor="@color/app_blue"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="#E5E5E5" />
+
+        <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+              android:id="@+id/rb_finance_intention_three"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:background="@drawable/selector_finance_intention_deadline_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/finance_deadline_three"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+
+            <RadioButton
+              android:id="@+id/rb_finance_intention_six"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="12dp"
+              android:background="@drawable/selector_finance_intention_deadline_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/finance_deadline_six"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+
+            <RadioButton
+              android:id="@+id/rb_finance_intention_nine"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:background="@drawable/selector_finance_intention_deadline_bg"
+              android:button="@null"
+              android:gravity="center"
+              android:text="@string/finance_deadline_nine"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+
+            <RadioButton
+              android:id="@+id/rb_finance_intention_twelve"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:background="@drawable/selector_finance_intention_deadline_bg"
+              android:button="@null"
+              android:checked="true"
+              android:gravity="center"
+              android:text="十二个月"
+              android:textAppearance="@style/TextAppearance.FontPath"
+              android:textColor="@color/selector_finance_intention_text"
+              android:textSize="14sp" />
+          </RadioGroup>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+              android:id="@+id/view_finance_intention_three"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+
+            <View
+              android:id="@+id/view_finance_intention_six"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="12dp"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+
+            <View
+              android:id="@+id/view_finance_intention_nine"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:background="@drawable/icon_finance_intention_box_select"
+              android:visibility="invisible" />
+
+            <View
+              android:id="@+id/view_finance_intention_twelve"
+              android:layout_width="0dp"
+              android:layout_height="41dp"
+              android:layout_weight="1"
+              android:layout_marginStart="12dp"
+              android:layout_marginLeft="12dp"
+              android:background="@drawable/icon_finance_intention_box_select" />
+          </LinearLayout>
+        </FrameLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/ll_finance_intention_gift"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/lists_item_text"
+            android:text="@string/finance_gift" />
+
+          <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+          <TextView
+            android:id="@+id/tv_finance_intent_gift"
+            style="@style/lists_item_text"
+            android:drawableEnd="@mipmap/icon_more"
+            android:drawablePadding="4dp"
+            android:drawableRight="@mipmap/icon_more"
+            android:text="@string/finance_gift_money"
+            android:textColor="@color/app_blue" />
+        </LinearLayout>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/finance_gift_tip"
+          android:textSize="13sp" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+  <Button
+    android:id="@+id/btn_intent_commit"
+    style="@style/lists_commit_button"
+    android:text="@string/finance_next" />
+</LinearLayout>
