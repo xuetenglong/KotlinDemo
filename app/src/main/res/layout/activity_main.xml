@@ -17,4 +17,11 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:onClick="onClick"/>
+
+    <com.example.xuetenglong.kotlindemo.view.SawtoothView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        />
+
+
 </RelativeLayout>

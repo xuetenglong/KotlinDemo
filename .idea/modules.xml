@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinDemo.iml" filepath="$PROJECT_DIR$/KotlinDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPChartLib/MPChartLib.iml" filepath="$PROJECT_DIR$/MPChartLib/MPChartLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carddemo/carddemo.iml" filepath="$PROJECT_DIR$/carddemo/carddemo.iml" />
     </modules>
   </component>
 </project>
